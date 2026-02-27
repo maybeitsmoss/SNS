@@ -14,6 +14,12 @@ public class followMouse : MonoBehaviour
 
     public float mouseSensitivity;
 
+    private bool isMovingRight;
+    private Vector2 lastPos;
+
+    public GameObject leftController;
+    public GameObject rightController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,8 +31,33 @@ public class followMouse : MonoBehaviour
 
     void Update()
     {
+        //moving right
+        if(transform.position.x > lastPos.x)
+        {
+            isMovingRight = true;
+        }
+        else
+        {
+            isMovingRight = false;
+        }
+
         xMovement += Input.GetAxis("Mouse X");
         yMovement += Input.GetAxis("Mouse Y");
+
+
+        //if(isMovingRight == true)
+        //{
+        //    leftController.GetComponent<SpriteRenderer>().enabled = false;
+        //    rightController.GetComponent<SpriteRenderer>().enabled = true;
+        //}
+        //else
+        //{
+        //    leftController.GetComponent<SpriteRenderer>().enabled = true;
+        //    rightController.GetComponent<SpriteRenderer>().enabled = false;
+        //}
+
+        lastPos = transform.position;
+
     }
 
 
