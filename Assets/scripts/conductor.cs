@@ -1,108 +1,51 @@
 using UnityEngine;
 
-
-[RequireComponent(typeof(AudioSource))]
-public class conductor : MonoBehaviour
+public class Conductor : MonoBehaviour
 {
-    /*public float BPM;
-    public float crochet;
-    public float beatCount;
-    public float songPosition;
-    public int barCount;
-    public int beatsPerBar = 4;
+
+    public float offset;
+    public float BPM;
+    public float beatInterval;
     public float nextBeatTime;
+    public float crochet;
+    private int beatCount;
 
-    float lastBeat;
-    private int difficulty;
+    private AudioSource music;
 
-    public AudioSource music;
-    private float dspSongTime;
 
+    void Awake()
+    {
+        music = GetComponent<AudioSource>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        music = GetComponent<AudioSource>();
-        //crochet = seconds between beats
-        crochet = 60f / BPM;
-        //records time when music starts
-        dspSongTime = (float)AudioSettings.dspTime;
-
+        //turn bpm into bps
+        crochet = BPM / 60f;
+        beatCount = 0;
+        nextBeatTime = (float)AudioSettings.dspTime;
         music.Play();
-        nextBeatTime = dspSongTime + crochet;
-
-        //songPosition = correspoinding variable on audio component
-        //songPosition = (float)(AudioSettings.dspTIme - dsptimesong) * song.pitch - offset
-        //BPM = bpm
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //how many seconds have passed since song start
-        //songPosition = (float)(AudioSettings.dspTime - dspSongTime);
-        //determine current beat
-        //beatCount = songPosition / crochet;
-        //determine current bar
-        //barCount = Mathf.FloorToInt(beatCount / beatsPerBar) + 1;
-
-
-        songPosition = (float)(AudioSettings.dspTime - dspSongTime);
-        beatCount = songPosition / crochet;
-
-        while(beatCount > nextBeatTime)
+        if(AudioSettings.dspTime >= nextBeatTime)
         {
-            onBeat();
-            nextBeatTime = dspSongTime + crochet;
-        }
-
-        //Debug.Log(beatCount);
-        
-    }
-
-    void onBeat()
-    {
-        Debug.Log("Beat");
-    }*/
-
-    public AudioSource audioSource;
-    public float BPM;
-
-    private int lastBeatSample = 0;
-    private int samplesPerBeat;
-
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-        samplesPerBeat = (int)((60f / BPM) * audioSource.clip.frequency);
-        audioSource.Play();
-    }
-
-    void Update()
-    {
-        int currentSample = audioSource.timeSamples;
-
-        if(currentSample >= lastBeatSample + samplesPerBeat)
-        {
-            while(currentSample >= lastBeatSample + samplesPerBeat)
+            if(beatCount >= 4)
             {
-                lastBeatSample += samplesPerBeat;
-                onBeat();
+                beatCount = 1;
+                Debug.Log(beatCount);
             }
+            else if(beatCount < 4)
+            {
+                beatCount += 1;
+                Debug.Log(beatCount);
+            }
+
+            nextBeatTime += crochet;
         }
 
-        if(currentSample < lastBeatSample)
-        {
-            lastBeatSample = 0;
-        }
     }
-
-    void onBeat()
-    {
-        Debug.Log("Beat");
-    }
-
-
-
-
 }
