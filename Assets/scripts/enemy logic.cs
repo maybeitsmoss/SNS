@@ -1,16 +1,38 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class enemylogic : MonoBehaviour
 {
+    public Vector2 targetPoint;
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //StartCoroutine(destruct());
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        Vector2 newPosition = Vector2.MoveTowards(rb.position, targetPoint, moveSpeed * Time.deltaTime);
+        rb.MovePosition(newPosition);
     }
+
+    public void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.tag == "sword")
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    /*IEnumerator destruct()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(gameObject);
+    }*/
 }
