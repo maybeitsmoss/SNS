@@ -19,7 +19,7 @@ public class center : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "enemy")
+        if(collider.tag == "enemy" || collider.tag == "footEnemy")
         {
             healthScript.TakeDamage();
             Destroy(collider.gameObject);

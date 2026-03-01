@@ -24,6 +24,7 @@ public class Conductor_2 : MonoBehaviour
     public GameObject rightTop;
     public GameObject rightBottom;
     public GameObject enemyPrefab;
+    public GameObject footEnemyPrefab;
 
     public int barToIgnore;
     private bool pause;
@@ -135,24 +136,55 @@ public class Conductor_2 : MonoBehaviour
         //yield return new WaitForSeconds(crochet);
 
         List<GameObject> spawnPoints = new List<GameObject>();
-
         for (int i = 0; i < 4; i++)
         {
             if (spawnHistory[i] == 1)
             {
-                Instantiate(enemyPrefab, leftTop.transform.position, Quaternion.identity);
+                int randomNum = Random.Range(1, 5);
+                if(randomNum == 4)
+                {
+                    Instantiate(footEnemyPrefab, leftTop.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, leftTop.transform.position, Quaternion.identity);
+                }
             }
             else if (spawnHistory[i] == 2)
             {
-                Instantiate(enemyPrefab, leftBottom.transform.position, Quaternion.identity);
+                int randomNum = Random.Range(1, 5);
+                if(randomNum == 4)
+                {
+                    Instantiate(footEnemyPrefab, leftBottom.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, leftBottom.transform.position, Quaternion.identity);
+                }
             }
             else if (spawnHistory[i] == 3)
             {
-                Instantiate(enemyPrefab, rightTop.transform.position, Quaternion.identity);
+                int randomNum = Random.Range(1, 5);
+                if(randomNum == 4)
+                {
+                    Instantiate(footEnemyPrefab, rightTop.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, rightTop.transform.position, Quaternion.identity);
+                }
             }
             else if (spawnHistory[i] == 4)
             {
-                Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
+                int randomNum = Random.Range(1, 5);
+                if(randomNum == 4)
+                {
+                    Instantiate(footEnemyPrefab, rightBottom.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
+                }
             }
 
             yield return new WaitForSeconds(crochet * 2);

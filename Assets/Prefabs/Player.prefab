@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 5233907068815198356}
   - component: {fileID: 7628046874841411288}
   - component: {fileID: 7825045117470783100}
+  - component: {fileID: 5030296670618167500}
   m_Layer: 0
   m_Name: thigh_R_0
   m_TagString: Untagged
@@ -329,6 +330,43 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -5.588406
     m_UpperAngle: 4.7750053
+--- !u!70 &5030296670618167500
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584866420500222732}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.23866773, y: -0.30518162}
+  m_Size: {x: 2.6004262, y: 3.0683992}
+  m_Direction: 0
 --- !u!1 &1188837612119408650
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +379,7 @@ GameObject:
   - component: {fileID: 2123290824968725109}
   - component: {fileID: 2359845993438737848}
   - component: {fileID: 3878979654265480052}
+  - component: {fileID: 4346062357772029758}
   m_Layer: 0
   m_Name: foreArm_R_0
   m_TagString: Untagged
@@ -475,6 +514,43 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -35.5
     m_UpperAngle: 35.491207
+--- !u!70 &4346062357772029758
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188837612119408650}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.20356375, y: -0.35801175}
+  m_Size: {x: 8.290647, y: 5.073815}
+  m_Direction: 1
 --- !u!1 &1210845180141662511
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,6 +855,7 @@ GameObject:
   - component: {fileID: 7189908788920248826}
   - component: {fileID: 202895121347186459}
   - component: {fileID: 5069516866756871105}
+  - component: {fileID: 631113114796310776}
   m_Layer: 0
   m_Name: torso_0
   m_TagString: Untagged
@@ -924,6 +1001,43 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.04, y: 3.96}
   m_Radius: 2.58
+--- !u!70 &631113114796310776
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666719878785945888}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.032311678, y: -1.5520144}
+  m_Size: {x: 4.149607, y: 5.5180607}
+  m_Direction: 0
 --- !u!1 &3819938330365242085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,6 +1770,7 @@ GameObject:
   - component: {fileID: 7211439166638502382}
   - component: {fileID: 2437523719440274218}
   - component: {fileID: 4751130049648321161}
+  - component: {fileID: 1012538396150743799}
   m_Layer: 0
   m_Name: thigh_L_0
   m_TagString: Untagged
@@ -1790,6 +1905,43 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -7.122876
     m_UpperAngle: 7.4093075
+--- !u!70 &1012538396150743799
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6428393687613967791}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.21519208, y: -0.07433927}
+  m_Size: {x: 2.537825, y: 3.0918744}
+  m_Direction: 0
 --- !u!1 &6888425617690520856
 GameObject:
   m_ObjectHideFlags: 0

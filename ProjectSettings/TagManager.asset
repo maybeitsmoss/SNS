@@ -9,6 +9,7 @@ TagManager:
   - sword
   - foot
   - enemy
+  - footEnemy
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class enemylogic : MonoBehaviour
+public class footEnemylogic : MonoBehaviour
 {
     public Vector2 targetPoint;
     public float moveSpeed = 5f;
@@ -26,7 +26,7 @@ public class enemylogic : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.tag == "sword")
+        if(collider.tag == "foot")
         {
             Destroy(gameObject);
         }
