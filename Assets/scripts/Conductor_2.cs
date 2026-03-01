@@ -25,9 +25,13 @@ public class Conductor_2 : MonoBehaviour
     public GameObject rightBottom;
     public GameObject enemyPrefab;
     public GameObject footEnemyPrefab;
+    public GameObject exclaimPrefab;
 
     public int barToIgnore;
     private bool pause;
+
+    private int difficulty;
+    public int difficultyChange;
 
     void Start()
     {
@@ -36,6 +40,7 @@ public class Conductor_2 : MonoBehaviour
         barCount = 1;
         crochet = 60f / BPM;
         beatDuration = crochet;
+        difficulty = 0;
         music.Play();
         StartCoroutine(startMetronome());
     }
@@ -97,9 +102,21 @@ public class Conductor_2 : MonoBehaviour
             }
             else if (barCount % 2 != 0)
             {
+                if(barCount >= difficultyChange)
+                {
+                    difficulty += 1;
+                }
                 djTurn = true;
                 Debug.Log("DJ's turn");
-                StartCoroutine(Attack());
+                if (difficulty == 0)
+                {
+                    StartCoroutine(Attack());
+                }
+                else
+                {
+                    StartCoroutine(FastAttack());
+                }
+                
             }
         }
     }
@@ -115,18 +132,93 @@ public class Conductor_2 : MonoBehaviour
         }
 
         Debug.Log(spawnList[0]);
+        makePopup(spawnList[0]);
 
         yield return new WaitForSeconds(crochet * 2);
 
         Debug.Log(spawnList[1]);
+        makePopup(spawnList[1]);
 
         yield return new WaitForSeconds(crochet * 2);
 
         Debug.Log(spawnList[2]);
+        makePopup(spawnList[2]);
 
         yield return new WaitForSeconds(crochet * 2);
 
         Debug.Log(spawnList[3]);
+        makePopup(spawnList[3]);
+
+        StartCoroutine(SpawnEnemies(spawnList));
+    }
+
+    void makePopup(int location)
+    {
+        if (location == 1)
+        {
+            Instantiate(exclaimPrefab, leftTop.transform.position, Quaternion.identity);
+        }
+        else if (location == 2)
+        {
+            Instantiate(exclaimPrefab, leftBottom.transform.position, Quaternion.identity);
+        }
+        else if (location == 3)
+        {
+            Instantiate(exclaimPrefab, rightTop.transform.position, Quaternion.identity);
+        }
+        else if (location == 4)
+        {
+            Instantiate(exclaimPrefab, rightBottom.transform.position, Quaternion.identity);
+        }
+    }
+
+    IEnumerator FastAttack()
+    {
+        List<int> spawnList = new List<int>();
+
+        for (int i = 0; i < 8; i++)
+        {
+            int randomSpawn = Random.Range(1, 5);
+            spawnList.Add(randomSpawn);
+        }
+
+        Debug.Log(spawnList[0]);
+        makePopup(spawnList[0]);
+
+        yield return new WaitForSeconds(crochet);
+
+        Debug.Log(spawnList[1]);
+        makePopup(spawnList[1]);
+
+        yield return new WaitForSeconds(crochet);
+
+        Debug.Log(spawnList[2]);
+        makePopup(spawnList[2]);
+
+        yield return new WaitForSeconds(crochet);
+
+        Debug.Log(spawnList[3]);
+        makePopup(spawnList[3]);
+
+        yield return new WaitForSeconds(crochet);
+
+        Debug.Log(spawnList[4]);
+        makePopup(spawnList[4]);
+
+        yield return new WaitForSeconds(crochet);
+
+        Debug.Log(spawnList[5]);
+        makePopup(spawnList[5]);
+
+        yield return new WaitForSeconds(crochet);
+
+        Debug.Log(spawnList[6]);
+        makePopup(spawnList[6]);
+
+        yield return new WaitForSeconds(crochet);
+
+        Debug.Log(spawnList[7]);
+        makePopup(spawnList[7]);
 
         StartCoroutine(SpawnEnemies(spawnList));
     }
@@ -136,7 +228,7 @@ public class Conductor_2 : MonoBehaviour
         //yield return new WaitForSeconds(crochet);
 
         List<GameObject> spawnPoints = new List<GameObject>();
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < spawnHistory.Count; i++)
         {
             if (spawnHistory[i] == 1)
             {
@@ -186,8 +278,16 @@ public class Conductor_2 : MonoBehaviour
                     Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
                 }
             }
-
-            yield return new WaitForSeconds(crochet * 2);
+            
+            if(difficulty == 0)
+            {
+                yield return new WaitForSeconds(crochet * 2);
+            }
+            else
+            {
+                yield return new WaitForSeconds(crochet);
+            }
+            
         }
     }
 }
