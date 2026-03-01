@@ -8,6 +8,7 @@ TagManager:
   - rightSpawn
   - sword
   - foot
+  - enemy
   layers:
   - Default
   - TransparentFX
