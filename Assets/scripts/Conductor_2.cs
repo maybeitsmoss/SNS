@@ -28,7 +28,7 @@ public class Conductor_2 : MonoBehaviour
     public GameObject exclaimPrefab;
 
     public int barToIgnore;
-    private bool pause;
+    public int endBar;
 
     private int difficulty;
     public int difficultyChange;
@@ -54,7 +54,11 @@ public class Conductor_2 : MonoBehaviour
 
     IEnumerator Metronome()
     {
-        onBeat();
+        if(barCount < endBar)
+        {
+            onBeat();
+        }
+        
 
         yield return new WaitForSeconds(crochet * 2);
 
