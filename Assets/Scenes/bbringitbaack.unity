@@ -932,7 +932,8 @@ MonoBehaviour:
   footEnemyPrefab: {fileID: 7508625911483996719, guid: d313bb267b9a4a048a8c69a17d143f24, type: 3}
   exclaimPrefab: {fileID: 2926374175746151138, guid: c0eb88d1b71911148a985001a8000881, type: 3}
   barToIgnore: 23
-  difficultyChange: 36
+  endBar: 40
+  difficultyChange: 1200000024000000
 --- !u!1 &953960169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5155273020179456074, guid: 2312df7442b1ac04189558ba08437e38, type: 3}
