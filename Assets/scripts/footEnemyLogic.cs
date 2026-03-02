@@ -22,6 +22,11 @@ public class footEnemylogic : MonoBehaviour
     {
         Vector2 newPosition = Vector2.MoveTowards(rb.position, targetPoint, moveSpeed * Time.deltaTime);
         rb.MovePosition(newPosition);
+
+        if (transform.position.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collider)

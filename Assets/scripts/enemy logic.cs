@@ -20,6 +20,11 @@ public class enemylogic : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        if(transform.position.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
         Vector2 newPosition = Vector2.MoveTowards(rb.position, targetPoint, moveSpeed * Time.deltaTime);
         rb.MovePosition(newPosition);
     }

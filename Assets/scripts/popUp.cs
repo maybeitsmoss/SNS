@@ -16,33 +16,33 @@ public class popUp : MonoBehaviour
     {
         transform.localScale = Vector3.zero;
 
-        while (transform.localScale.x < 3.2f)
+        while (transform.localScale.x < 1.2f)
         {
             transform.localScale += Vector3.one * Time.deltaTime * speed;
             yield return null;
         }
 
-        transform.localScale = new Vector3(3.2f, 3.2f, 3.2f);
+        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
 
-        while (transform.localScale.x > 3f)
+        while (transform.localScale.x > 1f)
         {
             transform.localScale -= Vector3.one * Time.deltaTime * (speed * 0.5f);
             yield return null;
         }
 
-        transform.localScale = new Vector3(3f, 3f, 3f);
+        transform.localScale = new Vector3(1f, 1f, 1f);
 
         yield return new WaitForSeconds(0.25f);
 
-        transform.localScale = new Vector3(3f, 3f, 3f);
+        transform.localScale = new Vector3(1f, 1f, 1f);
 
-        while (transform.localScale.x < 3.2f)
+        while (transform.localScale.x < 1.2f)
         {
             transform.localScale += Vector3.one * Time.deltaTime * (speed *0.5f);
             yield return null;
         }
 
-        transform.localScale = new Vector3(3.2f, 3.2f, 3.2f);
+        transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
 
         while (transform.localScale.x > 0f)
         {
