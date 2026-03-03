@@ -31,6 +31,11 @@ public class followMouse : MonoBehaviour
 
     void Update()
     {
+
+        if(Time.time < 0.2f)
+        {
+            return;
+        }
         //moving right
         /*if(transform.position.x > lastPos.x)
         {
