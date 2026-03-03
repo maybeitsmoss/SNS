@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 6f06a0d9626f0054aa539f48c5861d1e
+guid: 2354d13714e8c3242927de13e51733c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7301587932157749930
-    second: SNS_portal_0
+      213: -3901869161477039550
+    second: lets%20jam_0
   - first:
-      213: 5687238445125263971
-    second: SNS_portal_1
+      213: 2976241503717215437
+    second: lets%20jam_1
+  - first:
+      213: 7749673000651765065
+    second: lets%20jam_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 40
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SNS_portal_0
+      name: lets%20jam_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 19
-        width: 637
-        height: 838
+        x: 198
+        y: 1250
+        width: 2357
+        height: 694
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 655557f067c8baa90800000000000000
-      internalID: -7301587932157749930
+      spriteID: 24a1c1eaba6c9d9c0800000000000000
+      internalID: -3901869161477039550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SNS_portal_1
+      name: lets%20jam_1
       rect:
         serializedVersion: 2
-        x: 627
-        y: 455
-        width: 65
-        height: 180
+        x: 722
+        y: 640
+        width: 1156
+        height: 553
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 362e2aacb312dee40800000000000000
-      internalID: 5687238445125263971
+      spriteID: dccc6daf0ebbd4920800000000000000
+      internalID: 2976241503717215437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lets%20jam_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 49
+        width: 1574
+        height: 557
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 945b849d88e5c8b60800000000000000
+      internalID: 7749673000651765065
       vertices: []
       indices: 
       edges: []
@@ -150,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SNS_portal_0: -7301587932157749930
-      SNS_portal_1: 5687238445125263971
+      lets%20jam_0: -3901869161477039550
+      lets%20jam_1: 2976241503717215437
+      lets%20jam_2: 7749673000651765065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

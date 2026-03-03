@@ -73,6 +73,9 @@ public class followMouse : MonoBehaviour
 
         rb.MovePosition(transform.position + (new Vector3(xMovement, yMovement, 0) * mouseSensitivity));
 
+        //Vector3 movement = new Vector3(xMovement, 0f, yMovement);
+        //rb.AddForce(movement * mouseSensitivity);
+
         xMovement = 0f;
         yMovement = 0f;
 

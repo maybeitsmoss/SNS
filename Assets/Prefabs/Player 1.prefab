@@ -950,7 +950,7 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -18.03
+    m_LowerAngle: -9.25
     m_UpperAngle: 3.6
 --- !u!1 &2683260700030052016
 GameObject:
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::followMouse
   Zaxis: 0
   cam: {fileID: 0}
-  mouseSensitivity: 3
+  mouseSensitivity: 500
   leftController: {fileID: 0}
   rightController: {fileID: 0}
 --- !u!233 &4485096942823158349

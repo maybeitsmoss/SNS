@@ -4,6 +4,8 @@ using System.Collections;
 public class popUp : MonoBehaviour
 {
     public float speed = 10f;
+    public float timeToWait;
+    public float offset;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,7 +16,10 @@ public class popUp : MonoBehaviour
     // Update is called once per frame
     IEnumerator doPopUp()
     {
+
         transform.localScale = Vector3.zero;
+
+        yield return new WaitForSeconds(offset);
 
         while (transform.localScale.x < 1.2f)
         {
@@ -32,7 +37,7 @@ public class popUp : MonoBehaviour
 
         transform.localScale = new Vector3(1f, 1f, 1f);
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(timeToWait);
 
         transform.localScale = new Vector3(1f, 1f, 1f);
 

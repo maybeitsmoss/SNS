@@ -407,7 +407,7 @@ public class Conductor_2 : MonoBehaviour
                 }
             }
             
-            if(difficulty == 0)
+            if(difficulty == 0 || difficulty == 1)
             {
                 yield return new WaitForSeconds(crochet * 2);
             }

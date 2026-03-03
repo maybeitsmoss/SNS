@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 6f06a0d9626f0054aa539f48c5861d1e
+guid: 0f7063787911f9d408e2b1b727150f46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7301587932157749930
-    second: SNS_portal_0
-  - first:
-      213: 5687238445125263971
-    second: SNS_portal_1
+      213: 1801691073460219105
+    second: IMG_0622_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SNS_portal_0
+      name: IMG_0622_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 19
-        width: 637
-        height: 838
+        x: 1130
+        y: 122
+        width: 1535
+        height: 1550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 655557f067c8baa90800000000000000
-      internalID: -7301587932157749930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SNS_portal_1
-      rect:
-        serializedVersion: 2
-        x: 627
-        y: 455
-        width: 65
-        height: 180
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 362e2aacb312dee40800000000000000
-      internalID: 5687238445125263971
+      spriteID: 1eca69c4c74e00910800000000000000
+      internalID: 1801691073460219105
       vertices: []
       indices: 
       edges: []
@@ -150,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SNS_portal_0: -7301587932157749930
-      SNS_portal_1: 5687238445125263971
+      IMG_0622_0: 1801691073460219105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
