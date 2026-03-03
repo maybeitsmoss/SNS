@@ -104,6 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5a8324ad87a1b4b8d37542b5d44ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::popUp
-  speed: 30
+  speed: 20
   timeToWait: 2
   offset: 3

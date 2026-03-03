@@ -155,8 +155,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.18, y: -0.6}
-  m_Radius: 0.9
+  m_Offset: {x: -0.03, y: -0.6}
+  m_Radius: 1
 --- !u!114 &1621396774097942273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +171,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::enemylogic
   targetPoint: {x: 0, y: 0}
   moveSpeed: 50
+  boomPrefab: {fileID: 9121381639300602373, guid: 410a84667f970ce4490915661f39d841, type: 3}

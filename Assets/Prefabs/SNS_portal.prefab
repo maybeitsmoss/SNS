@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4688677304714628511}
   m_Layer: 0
   m_Name: SNS_portal
-  m_TagString: Untagged
+  m_TagString: portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba5a8324ad87a1b4b8d37542b5d44ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::popUp
-  speed: 30
+  speed: 20
   timeToWait: 110
   offset: 3

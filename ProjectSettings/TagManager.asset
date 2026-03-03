@@ -10,6 +10,7 @@ TagManager:
   - foot
   - enemy
   - footEnemy
+  - portal
   layers:
   - Default
   - TransparentFX

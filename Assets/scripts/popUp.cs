@@ -6,11 +6,22 @@ public class popUp : MonoBehaviour
     public float speed = 10f;
     public float timeToWait;
     public float offset;
+    //public GameObject conductor;
+    //private AudioSource conductorAudio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(doPopUp());    
+        //conductorAudio = conductor.GetComponent<AudioSource>();
+
+        //if (gameObject.tag == "portal")
+        //{
+        //    timeToWait = conductorAudio.clip.length - offset;
+        //}
+
+        StartCoroutine(doPopUp());
+
+        
     }
 
     // Update is called once per frame
