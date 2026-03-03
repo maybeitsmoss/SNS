@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8010409384565227350}
   - component: {fileID: 8280285372067487630}
   - component: {fileID: 7666596495317084017}
-  - component: {fileID: 1885913896307555862}
   m_Layer: 0
   m_Name: foreArm_R_0
   m_TagString: Untagged
@@ -147,43 +146,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -16.6
     m_UpperAngle: 16.4
---- !u!70 &1885913896307555862
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47601610154768407}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.20356375, y: -0.35801175}
-  m_Size: {x: 8.290647, y: 5.073815}
-  m_Direction: 1
 --- !u!1 &260812467687816050
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,7 +913,7 @@ HingeJoint2D:
   m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: -9.25
-    m_UpperAngle: 3.6
+    m_UpperAngle: 8.76
 --- !u!1 &2683260700030052016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::followMouse
   Zaxis: 0
   cam: {fileID: 0}
-  mouseSensitivity: 500
+  mouseSensitivity: 2
   leftController: {fileID: 0}
   rightController: {fileID: 0}
 --- !u!233 &4485096942823158349
@@ -1444,8 +1406,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -21.86
-    m_UpperAngle: 20.99
+    m_LowerAngle: -9.74
+    m_UpperAngle: 10.2
 --- !u!58 &1602200683022349648
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1812,7 +1774,7 @@ HingeJoint2D:
   m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: -4.64
-    m_UpperAngle: 41.3
+    m_UpperAngle: 8.4
 --- !u!58 &3197370940366981744
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1861,7 +1823,6 @@ GameObject:
   - component: {fileID: 4142479307543534293}
   - component: {fileID: 5310102445880348788}
   - component: {fileID: 493815588074049493}
-  - component: {fileID: 8392139318605366005}
   m_Layer: 0
   m_Name: torso_0
   m_TagString: Untagged
@@ -2007,43 +1968,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.04, y: 4.23}
   m_Radius: 2.96
---- !u!70 &8392139318605366005
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6230794475365291508}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.032311678, y: -1.5520144}
-  m_Size: {x: 4.149607, y: 5.5180607}
-  m_Direction: 0
 --- !u!1 &8127779424071669660
 GameObject:
   m_ObjectHideFlags: 0
