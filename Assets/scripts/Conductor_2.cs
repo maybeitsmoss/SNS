@@ -41,7 +41,7 @@ public class Conductor_2 : MonoBehaviour
         crochet = 60f / BPM;
         beatDuration = crochet;
         difficulty = 0;
-        music.Play();
+        //music.Play();
         StartCoroutine(startMetronome());
     }
 
@@ -49,6 +49,7 @@ public class Conductor_2 : MonoBehaviour
     {
         yield return new WaitForSeconds(offset);
 
+        music.Play();
         StartCoroutine(Metronome());
     }
 

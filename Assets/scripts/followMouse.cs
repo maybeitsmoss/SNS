@@ -14,8 +14,8 @@ public class followMouse : MonoBehaviour
 
     public float mouseSensitivity;
 
-    private bool isMovingRight;
-    private Vector2 lastPos;
+    //private bool isMovingRight;
+    //private Vector2 lastPos;
 
     public GameObject leftController;
     public GameObject rightController;
@@ -32,14 +32,14 @@ public class followMouse : MonoBehaviour
     void Update()
     {
         //moving right
-        if(transform.position.x > lastPos.x)
+        /*if(transform.position.x > lastPos.x)
         {
             isMovingRight = true;
         }
         else
         {
             isMovingRight = false;
-        }
+        }*/
 
         xMovement += Input.GetAxis("Mouse X");
         yMovement += Input.GetAxis("Mouse Y");
@@ -56,7 +56,7 @@ public class followMouse : MonoBehaviour
         //    rightController.GetComponent<SpriteRenderer>().enabled = false;
         //}
 
-        lastPos = transform.position;
+        //lastPos = transform.position;
 
     }
 

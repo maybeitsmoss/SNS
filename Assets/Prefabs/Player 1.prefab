@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8010409384565227350}
   - component: {fileID: 8280285372067487630}
   - component: {fileID: 7666596495317084017}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: foreArm_R_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - component: {fileID: 9141282088355099362}
   - component: {fileID: 5438913639900338171}
   - component: {fileID: 1320712243459092611}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hair_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 1459948015716687906}
   - component: {fileID: 616493753976091368}
   - component: {fileID: 687555738311033902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: medieval-ancient-steel-sword-with-ornate-handle-on-isolated-background-png_0
   m_TagString: sword
   m_Icon: {fileID: 0}
@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 591216205986688339}
   - component: {fileID: 2638251143225685227}
   - component: {fileID: 7440822935783724103}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: arm_L_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 550141442550873663}
   - component: {fileID: 7488151354822645329}
   - component: {fileID: 3194099247729868068}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: hair_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 8250127437455131}
   - component: {fileID: 8021893164952260083}
   - component: {fileID: 77028752072508419}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: arm_R_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 7322054346013600669}
   - component: {fileID: 4485096942823158349}
   - component: {fileID: 33454098202471363}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: followRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1127,7 +1127,7 @@ GameObject:
   - component: {fileID: 425240293351733628}
   - component: {fileID: 6738899874245684909}
   - component: {fileID: 1012703354953347761}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: foreArm_L_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   - component: {fileID: 8502953360813797726}
   - component: {fileID: 4923151183636789822}
   - component: {fileID: 1602200683022349648}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: leg_L_0
   m_TagString: foot
   m_Icon: {fileID: 0}
@@ -1457,7 +1457,7 @@ GameObject:
   - component: {fileID: 234723532318763273}
   - component: {fileID: 3704548876517946180}
   - component: {fileID: 5845488326542680866}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: thigh_R_0
   m_TagString: foot
   m_Icon: {fileID: 0}
@@ -1641,7 +1641,7 @@ GameObject:
   - component: {fileID: 8842527227244440462}
   - component: {fileID: 5403890186593103835}
   - component: {fileID: 3197370940366981744}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: leg_R_0
   m_TagString: foot
   m_Icon: {fileID: 0}
@@ -1823,7 +1823,7 @@ GameObject:
   - component: {fileID: 4142479307543534293}
   - component: {fileID: 5310102445880348788}
   - component: {fileID: 493815588074049493}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: torso_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1981,7 +1981,7 @@ GameObject:
   - component: {fileID: 5064651124331913080}
   - component: {fileID: 5702051238860882095}
   - component: {fileID: 1958758762816395637}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: thigh_L_0
   m_TagString: foot
   m_Icon: {fileID: 0}
@@ -2161,7 +2161,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 258008225247422646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,7 +2207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3247020667560188713}
   - component: {fileID: 3392441614086877057}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: face
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2300,7 +2300,7 @@ GameObject:
   - component: {fileID: 3877903840809508357}
   - component: {fileID: 1510075599710193050}
   - component: {fileID: 7313147191504215235}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Front Hair_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
