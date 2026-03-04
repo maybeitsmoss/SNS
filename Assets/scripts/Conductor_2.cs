@@ -55,6 +55,7 @@ public class Conductor_2 : MonoBehaviour
 
         music.Play();
         StartCoroutine(Metronome());
+        Debug.Log("started metronome");
 
         if (restart == false)
         {

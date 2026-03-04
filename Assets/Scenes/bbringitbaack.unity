@@ -1005,7 +1005,7 @@ MonoBehaviour:
   BPM: 167
   crochet: 0
   barOffset: 3
-  beatOffset: 1
+  beatOffset: 0
   offset: 5
   djTurn: 0
   leftTop: {fileID: 953960169}
@@ -1566,7 +1566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398300140347298741, guid: 1aa7849a772c1414d866dbb9542efc86, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1398300140347298741, guid: 1aa7849a772c1414d866dbb9542efc86, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1623,7 +1623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2098427696631236533, guid: 9bea951458485e34495b2d9c80ee0bc9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.6
+      value: -9.1
       objectReference: {fileID: 0}
     - target: {fileID: 2098427696631236533, guid: 9bea951458485e34495b2d9c80ee0bc9, type: 3}
       propertyPath: m_LocalPosition.z
