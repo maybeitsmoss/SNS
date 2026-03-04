@@ -11,6 +11,8 @@ TagManager:
   - enemy
   - footEnemy
   - portal
+  - ebb
+  - flow
   layers:
   - Default
   - TransparentFX

@@ -172,3 +172,4 @@ MonoBehaviour:
   targetPoint: {x: 0, y: 0}
   moveSpeed: 50
   boomPrefab: {fileID: 9121381639300602373, guid: 410a84667f970ce4490915661f39d841, type: 3}
+  record: {fileID: 1387815518039881736, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}

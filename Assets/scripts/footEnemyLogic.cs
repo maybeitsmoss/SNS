@@ -8,6 +8,7 @@ public class footEnemylogic : MonoBehaviour
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     public GameObject boomPrefab;
+    public GameObject record;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,6 +16,7 @@ public class footEnemylogic : MonoBehaviour
     {
         
         rb = GetComponent<Rigidbody2D>();
+        targetPoint = record.transform.position;
         
     }
 

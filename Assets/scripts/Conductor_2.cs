@@ -6,7 +6,7 @@ public class Conductor_2 : MonoBehaviour
 {
     //public GameObjet enemyPrefab;
     public float BPM;
-    private float crochet;
+    public float crochet;
     private int beatCount;
     private float beatDuration;
     private int barCount;
@@ -33,6 +33,8 @@ public class Conductor_2 : MonoBehaviour
     private int difficulty;
     public List<int> difficultyChange;
 
+    private bool restart;
+
     void Start()
     {
         music = GetComponent<AudioSource>();
@@ -47,10 +49,23 @@ public class Conductor_2 : MonoBehaviour
 
     IEnumerator startMetronome()
     {
+        //bool restart;
+
         yield return new WaitForSeconds(offset);
 
         music.Play();
         StartCoroutine(Metronome());
+
+        if (restart == false)
+        {
+            squashStretch[] squashScript = FindObjectsOfType<squashStretch>();
+            foreach (squashStretch scriptInstance in squashScript)
+            {
+                scriptInstance.StartCoroutine("SquishCoroutine");
+            }
+
+            restart = true;
+        }
     }
 
     IEnumerator Metronome()
