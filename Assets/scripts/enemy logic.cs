@@ -7,7 +7,7 @@ public class enemylogic : MonoBehaviour
     public Vector2 targetPoint;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
-    public GameObject boomPrefab;
+    public GameObject halfPrefab;
     public GameObject record;
     
 
@@ -36,7 +36,7 @@ public class enemylogic : MonoBehaviour
     {
         if(collider.tag == "sword")
         {
-            Instantiate(boomPrefab, transform.position, Quaternion.identity);
+            Instantiate(halfPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         

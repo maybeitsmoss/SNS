@@ -20,14 +20,17 @@ public class health : MonoBehaviour
 
     public void TakeDamage()
     {
+        if (healthCount > 0)
+        {
+            healthCount -= 10f;
+
+            Vector3 squishedScale = new Vector3(healthCount / 100f, 1, 1);
+
+            transform.localScale = squishedScale;
+        }
         //healthCount -= 10;
         //healthText.text = healthCount.ToString();
-        healthCount -= 10f;
-
-
-        Vector3 squishedScale = new Vector3(healthCount / 100f, 1, 1);
-
-        transform.localScale = squishedScale;
+        
 
         Debug.Log(healthCount);
 
