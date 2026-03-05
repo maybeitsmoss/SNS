@@ -12,8 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/credits.unity
     guid: 4f69dd038f952714d8ba9664a989827f
   - enabled: 1
+    path: Assets/Scenes/thissomebullshit.unity
+    guid: d69c565baf8513e4c9a7ecd006a2944a
+  - enabled: 1
     path: Assets/Scenes/bbringitbaack.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/readyOrNot.unity
+    guid: 22f9cfb9c4edfc447882d78b2400f398
+  - enabled: 1
+    path: Assets/Scenes/hhheyyyyyy.unity
+    guid: d4563c1f65084fd4d82d7079f14446a9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

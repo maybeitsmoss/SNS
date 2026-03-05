@@ -173,3 +173,6 @@ MonoBehaviour:
   moveSpeed: 50
   boomPrefab: {fileID: 9121381639300602373, guid: 410a84667f970ce4490915661f39d841, type: 3}
   record: {fileID: 1387815518039881736, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
+  stage1moveSpeed: 50
+  stage2moveSpeed: 57
+  stage3moveSpeed: 67

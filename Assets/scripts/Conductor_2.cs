@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class Conductor_2 : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class Conductor_2 : MonoBehaviour
     public GameObject footEnemyPrefab;
     public GameObject exclaimPrefab;
 
+   
+
     public int barToIgnore;
     public int endBar;
 
@@ -37,6 +40,9 @@ public class Conductor_2 : MonoBehaviour
 
     void Start()
     {
+
+        //levelManager.LoadScene(1);
+
         music = GetComponent<AudioSource>();
         beatCount = beatOffset;
         barCount = 1;
@@ -75,14 +81,26 @@ public class Conductor_2 : MonoBehaviour
         {
             onBeat();
         }
-        
+        else
+        {
+            StartCoroutine(EndLevel());
+        }
 
-        yield return new WaitForSeconds(crochet * 2);
+
+            yield return new WaitForSeconds(crochet * 2);
 
         //beatDuration = 1 / crochet;
 
         StartCoroutine(Metronome());
 
+    }
+
+    IEnumerator EndLevel()
+    {
+        yield return new WaitForSeconds(crochet * 16);
+
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        levelManager.SceneTransition(currentScene + 1);
     }
 
     void onBeat()

@@ -1,6 +1,7 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class footEnemylogic : MonoBehaviour
 {
@@ -9,12 +10,27 @@ public class footEnemylogic : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject boomPrefab;
     public GameObject record;
-    
+    //public Conductor_2 conductorScript;
+    public float stage1moveSpeed;
+    public float stage2moveSpeed;
+    public float stage3moveSpeed;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (SceneManager.GetActiveScene().name == "bbringitbaack")
+        {
+            moveSpeed = stage1moveSpeed;
+        }
+        else if (SceneManager.GetActiveScene().name == "readyOrNot")
+        {
+            moveSpeed = stage2moveSpeed;
+        }
+        else if (SceneManager.GetActiveScene().name == "hhheyyyyyy")
+        {
+            moveSpeed = stage3moveSpeed;
+        }
         rb = GetComponent<Rigidbody2D>();
         targetPoint = record.transform.position;
         
