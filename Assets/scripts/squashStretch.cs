@@ -16,7 +16,15 @@ public class squashStretch : MonoBehaviour
             yield return new WaitForSeconds(conductorScript.crochet);
         }
         //wait 0.36 seconds (music is ~163 bpm -> 0.36 seconds per beat)
-        yield return new WaitForSeconds(conductorScript.crochet);
+        if (gameObject.tag == "portal")
+        {
+            yield return new WaitForSeconds(conductorScript.crochet * 2);
+        }
+        else
+        {
+            yield return new WaitForSeconds(conductorScript.crochet);
+        }
+        
 
         //Debugging (no bugs only fish)
         //Debug.Log("SquishCoroutine started");
@@ -30,7 +38,14 @@ public class squashStretch : MonoBehaviour
         transform.localScale = squishedScale;
         
 
-        yield return new WaitForSeconds(conductorScript.crochet);
+        if (gameObject.tag == "portal")
+        {
+            yield return new WaitForSeconds(conductorScript.crochet * 2);
+        }
+        else
+        {
+            yield return new WaitForSeconds(conductorScript.crochet);
+        }
 
         //return to original size after another beat
         transform.localScale = originalScale;
