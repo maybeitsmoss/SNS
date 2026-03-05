@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91d8b9d5cb59c843929ab1ccb9a2dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::health
+  mouseScript: {fileID: 1269011069}
 --- !u!114 &243670246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,6 +1443,7 @@ MonoBehaviour:
   barOffset: 2
   beatOffset: 0
   offset: 5
+  fadeOutDuration: 3
   djTurn: 0
   leftTop: {fileID: 158278665}
   leftBottom: {fileID: 202384319}
@@ -1450,7 +1452,6 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4336254073953163242, guid: fa8ea44e4a8f34840bd399278797c510, type: 3}
   footEnemyPrefab: {fileID: 7508625911483996719, guid: d313bb267b9a4a048a8c69a17d143f24, type: 3}
   exclaimPrefab: {fileID: 2926374175746151138, guid: c0eb88d1b71911148a985001a8000881, type: 3}
-  enemyMoveSpeed: 0
   barToIgnore: -1
   endBar: 48
   difficultyChange: 1a00000028000000
@@ -1678,6 +1679,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cf02276b7a4766438d6a7fcd9540755, type: 3}
+--- !u!114 &1269011069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7322054346013600669, guid: 9cf02276b7a4766438d6a7fcd9540755, type: 3}
+  m_PrefabInstance: {fileID: 1269011068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcfed8cb685e004ea16587286339488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::followMouse
 --- !u!1001 &1426645351
 PrefabInstance:
   m_ObjectHideFlags: 0

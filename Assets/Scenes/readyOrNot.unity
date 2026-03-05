@@ -641,6 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91d8b9d5cb59c843929ab1ccb9a2dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::health
+  mouseScript: {fileID: 742044359}
 --- !u!114 &243670246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,6 +1266,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742044359 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7322054346013600669, guid: 9cf02276b7a4766438d6a7fcd9540755, type: 3}
+  m_PrefabInstance: {fileID: 1269011068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcfed8cb685e004ea16587286339488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::followMouse
 --- !u!1001 &754413002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1539,6 +1551,7 @@ MonoBehaviour:
   barOffset: 2
   beatOffset: -1
   offset: 5
+  fadeOutDuration: 3
   djTurn: 0
   leftTop: {fileID: 158278665}
   leftBottom: {fileID: 202384319}

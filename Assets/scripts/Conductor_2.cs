@@ -17,6 +17,7 @@ public class Conductor_2 : MonoBehaviour
     public float offset = 0.2f;
 
     private AudioSource music;
+    public float fadeOutDuration;
 
     public bool djTurn;
 
@@ -32,6 +33,7 @@ public class Conductor_2 : MonoBehaviour
 
     public int barToIgnore;
     public int endBar;
+    private bool gameOver = false;
 
     private int difficulty;
     public List<int> difficultyChange;
@@ -99,8 +101,12 @@ public class Conductor_2 : MonoBehaviour
     {
         yield return new WaitForSeconds(crochet * 16);
 
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
-        levelManager.SceneTransition(currentScene + 1);
+        if (gameOver = false)
+        {
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            levelManager.SceneTransition(currentScene + 1);
+        }
+        
     }
 
     void onBeat()
@@ -452,5 +458,39 @@ public class Conductor_2 : MonoBehaviour
             }
             
         }
+    }
+
+    IEnumerator FadeOut()
+    {
+        gameOver = true;
+        endBar = barCount - 2;
+
+        float startVolume = music.volume;
+        float startPitch = music.pitch;
+        float timer = 0f;
+
+        squashStretch[] squashScript = FindObjectsOfType<squashStretch>();
+            foreach (squashStretch scriptInstance in squashScript)
+            {
+                scriptInstance.Stop();
+            }
+
+        while (timer < fadeOutDuration)
+        {
+            timer += Time.deltaTime;
+            music.volume = Mathf.Lerp(startVolume, 0f, timer / fadeOutDuration);
+            music.pitch = Mathf.Lerp(startPitch, 0f, timer / fadeOutDuration);
+            yield return null;
+        }
+        music.volume = 0f;
+        music.pitch = 0f;
+
+        music.Stop();
+
+        
+
+        music.volume = startVolume;
+        music.pitch = startPitch;
+
     }
 }

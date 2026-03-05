@@ -54,6 +54,11 @@ public class squashStretch : MonoBehaviour
         StartCoroutine("SquishCoroutine");
     }
 
+    public void Stop()
+    {
+        StopCoroutine(nameof(SquishCoroutine));
+    }
+
     
 }
     

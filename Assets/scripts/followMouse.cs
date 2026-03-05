@@ -20,6 +20,8 @@ public class followMouse : MonoBehaviour
     public GameObject leftController;
     public GameObject rightController;
 
+    public bool gameOver = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -45,9 +47,12 @@ public class followMouse : MonoBehaviour
         {
             isMovingRight = false;
         }*/
-
-        xMovement += Input.GetAxis("Mouse X");
-        yMovement += Input.GetAxis("Mouse Y");
+        if(gameOver == false)
+        {
+            xMovement += Input.GetAxis("Mouse X");
+            yMovement += Input.GetAxis("Mouse Y");
+        }
+        
 
 
         //if(isMovingRight == true)
@@ -75,14 +80,14 @@ public class followMouse : MonoBehaviour
         //float yMovement = Input.GetAxis("Mouse Y");
 
         //transform.Translate(new Vector2(xMovement, yMovement));
+        if (gameOver == false)
+        {
+            rb.MovePosition(transform.position + (new Vector3(xMovement, yMovement, 0) * mouseSensitivity));
 
-        rb.MovePosition(transform.position + (new Vector3(xMovement, yMovement, 0) * mouseSensitivity));
-
-        //Vector3 movement = new Vector3(xMovement, 0f, yMovement);
-        //rb.AddForce(movement * mouseSensitivity);
-
-        xMovement = 0f;
-        yMovement = 0f;
+            xMovement = 0f;
+            yMovement = 0f;
+        }
+        
 
         //Vector3 mousePosition = Input.mousePosition;
 

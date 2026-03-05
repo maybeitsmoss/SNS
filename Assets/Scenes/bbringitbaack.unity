@@ -741,6 +741,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
+--- !u!114 &908735380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7322054346013600669, guid: 9cf02276b7a4766438d6a7fcd9540755, type: 3}
+  m_PrefabInstance: {fileID: 5494323409216960928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcfed8cb685e004ea16587286339488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::followMouse
 --- !u!1 &912467081
 GameObject:
   m_ObjectHideFlags: 0
@@ -888,6 +899,7 @@ MonoBehaviour:
   barOffset: 3
   beatOffset: 0
   offset: 5
+  fadeOutDuration: 3
   djTurn: 0
   leftTop: {fileID: 953960169}
   leftBottom: {fileID: 80886302}
@@ -1983,6 +1995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d91d8b9d5cb59c843929ab1ccb9a2dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::health
+  mouseScript: {fileID: 908735380}
 --- !u!1001 &8735207967703128383
 PrefabInstance:
   m_ObjectHideFlags: 0
