@@ -10,6 +10,7 @@ public class health : MonoBehaviour
     private float healthCount;
     private AudioSource recordScratch;
     public followMouse mouseScript;
+    public center centerScript;
 
     //public Conductor_2 conductorScript;
     
@@ -45,6 +46,8 @@ public class health : MonoBehaviour
             }
 
             mouseScript.gameOver = true;
+
+            centerScript.StartCoroutine("GameOver");
         }
         //healthCount -= 10;
         //healthText.text = healthCount.ToString();

@@ -52,6 +52,10 @@ public class followMouse : MonoBehaviour
             xMovement += Input.GetAxis("Mouse X");
             yMovement += Input.GetAxis("Mouse Y");
         }
+        else
+        {
+            Cursor.visible = true;
+        }
         
 
 

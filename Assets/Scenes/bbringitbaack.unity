@@ -1105,6 +1105,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 672783544}
   m_SourcePrefab: {fileID: 100100000, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+--- !u!114 &1580755568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 472049970764394307, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
+  m_PrefabInstance: {fileID: 685238183}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b471efef48ca30e4f8ccf9a5e67a1637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1606547587 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1861657350327921434, guid: c8ff1e66c75a25440a5e8e026a1ae669, type: 3}
@@ -1958,7 +1969,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: flow
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7704623899383742870, guid: c8ff1e66c75a25440a5e8e026a1ae669, type: 3}
+      propertyPath: conductorScript
+      value: 
+      objectReference: {fileID: 912467084}
+    m_RemovedComponents:
+    - {fileID: 7704623899383742870, guid: c8ff1e66c75a25440a5e8e026a1ae669, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -1996,6 +2012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::health
   mouseScript: {fileID: 908735380}
+  centerScript: {fileID: 1580755568}
 --- !u!1001 &8735207967703128383
 PrefabInstance:
   m_ObjectHideFlags: 0

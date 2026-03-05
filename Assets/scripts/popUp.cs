@@ -6,23 +6,28 @@ public class popUp : MonoBehaviour
     public float speed = 10f;
     public float timeToWait;
     public float offset;
-    //public GameObject conductor;
-    //private AudioSource conductorAudio;
+    private bool gameOver = false;
+    private SpriteRenderer spriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //conductorAudio = conductor.GetComponent<AudioSource>();
-
-        //if (gameObject.tag == "portal")
-        //{
-        //    timeToWait = conductorAudio.clip.length - offset;
-        //}
-
-        StartCoroutine(doPopUp());
-
-        
+        if (GetComponent<SpriteRenderer>() != null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
+        StartCoroutine(doPopUp());    
     }
+
+    /*void Update()
+    {
+        if (gameOver == true)
+        {
+            Color temp = spriteRenderer.color;
+            temp.a = 0f;
+            spriteRenderer.color = temp;
+        }
+    }*/
 
     // Update is called once per frame
     IEnumerator doPopUp()
@@ -70,5 +75,23 @@ public class popUp : MonoBehaviour
         Destroy(gameObject);
 
 
+    }
+
+    IEnumerator FadeAway()
+    {
+        if (gameObject.tag == "portal")
+        {
+            Color temp = spriteRenderer.color;
+            while (temp.a > 0)
+            {
+                //Color temp = spriteRenderer.color;
+
+                temp.a -= 0.01f;
+
+                spriteRenderer.color = temp;
+
+                yield return null;
+            }
+        }
     }
 }

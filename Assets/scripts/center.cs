@@ -15,13 +15,23 @@ public class center : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        speed = new Vector3(0, 0, rotationSpeed);
+        speed = new Vector3(0f, 0f, rotationSpeed);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(speed * Time.deltaTime);
+    }
+
+    IEnumerator GameOver()
+    {
+        while (rotationSpeed > 0f)
+        {
+            rotationSpeed -= 0.01f;
+            speed = new Vector3(0f, 0f, rotationSpeed);
+            yield return null;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collider)

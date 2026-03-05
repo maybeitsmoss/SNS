@@ -101,7 +101,7 @@ public class Conductor_2 : MonoBehaviour
     {
         yield return new WaitForSeconds(crochet * 16);
 
-        if (gameOver = false)
+        if (gameOver == false)
         {
             int currentScene = SceneManager.GetActiveScene().buildIndex;
             levelManager.SceneTransition(currentScene + 1);
@@ -473,6 +473,12 @@ public class Conductor_2 : MonoBehaviour
             foreach (squashStretch scriptInstance in squashScript)
             {
                 scriptInstance.Stop();
+            }
+
+        popUp[] popUpScript = FindObjectsOfType<popUp>();
+            foreach (popUp scriptInstance in popUpScript)
+            {
+                scriptInstance.StartCoroutine("FadeAway");
             }
 
         while (timer < fadeOutDuration)
