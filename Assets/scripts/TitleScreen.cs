@@ -13,7 +13,13 @@ public class TitleScreen : MonoBehaviour
         SceneManager.LoadSceneAsync("credits");
 
     }
-  
+
+    public void LoadLevel()
+    {
+        Debug.Log("Loaded Level");
+
+        SceneManager.LoadScene("TitleScreen");
+    }
     public void QuitGame()
     {
         Application.Quit();
