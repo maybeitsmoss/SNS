@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1176209786699987994, guid: 3f0181a27f810084b8122f9a824a25d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::enemylogic
   targetPoint: {x: 0, y: 0}
   halfPrefab: {fileID: 392893529650636781, guid: 48da8936a70209244ab9a7be7b066ab0, type: 3}
-  record: {fileID: 1387815518039881736, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
   stage1moveSpeed: 55
   stage2moveSpeed: 57
   stage3moveSpeed: 67
+  stage0moveSpeed: 0

@@ -1,10 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class center : MonoBehaviour
 {
 
+    public GameObject healthBar;
     public health healthScript;
     public float rotationSpeed;
     private Vector3 speed;
@@ -38,7 +40,15 @@ public class center : MonoBehaviour
     {
         if(collider.tag == "enemy" || collider.tag == "footEnemy")
         {
-            healthScript.TakeDamage();
+            if(SceneManager.GetActiveScene().name != "thissomebullshit")
+            {
+                healthScript.TakeDamage();
+            }
+            else
+            {
+                healthBar.GetComponent<AudioSource>().Play();
+            }
+            
             Destroy(collider.gameObject);
             StartCoroutine(Hurt(0.15f));
         }

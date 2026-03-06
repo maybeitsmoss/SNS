@@ -9,11 +9,12 @@ public class enemylogic : MonoBehaviour
     private float moveSpeed;
     private Rigidbody2D rb;
     public GameObject halfPrefab;
-    public GameObject record;
+    private GameObject record;
 
     public float stage1moveSpeed;
     public float stage2moveSpeed;
     public float stage3moveSpeed;
+    public float stage0moveSpeed;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,6 +32,11 @@ public class enemylogic : MonoBehaviour
         {
             moveSpeed = stage3moveSpeed;
         }
+        else
+        {
+            moveSpeed = stage0moveSpeed;
+        }
+        record = GameObject.Find("radius");
         rb = GetComponent<Rigidbody2D>();
         targetPoint = record.transform.position;
         

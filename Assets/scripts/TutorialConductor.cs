@@ -42,9 +42,14 @@ public class TutorialConductor : MonoBehaviour
 
 
     public List<int> barsToPlay;
+
+    public GameObject boothPrefab;
+    private Animator boothAnimator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        boothPrefab.SetActive(false);
         music = GetComponent<AudioSource>();
         beatCount = beatOffset;
         barCount = 1;
@@ -115,13 +120,13 @@ public class TutorialConductor : MonoBehaviour
             barCount += 1;
             takeTurn();
             beatCount = 1;
-            //Debug.Log(beatCount);
+            Debug.Log("New Bar: " + barCount);
             
         }
         else if (beatCount < 4)
         {
             beatCount += 1;
-            //Debug.Log(beatCount);
+            Debug.Log(beatCount);
         }
     }
 
@@ -148,10 +153,15 @@ public class TutorialConductor : MonoBehaviour
 
     IEnumerator Attack()
     {
+        //boothPrefab.SetActive(true);
+        //boothAnimator.Play("slideDown");
+        
 
         Instantiate(exclaimPrefab, leftTop.transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(crochet * 2);
+
+        //boothAnimator.Play("idle");
 
         Instantiate(enemyPrefab, leftTop.transform.position, Quaternion.identity);
 
@@ -180,6 +190,8 @@ public class TutorialConductor : MonoBehaviour
         Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
 
         yield return new WaitForSeconds(crochet * 2);
+        //boothAnimator.Play("slideUp");
+        
     }
 
     IEnumerator GroovyAttack1()
@@ -247,7 +259,7 @@ public class TutorialConductor : MonoBehaviour
 
         StartCoroutine(SpawnEnemies(spawnList));
 
-        yield return new WaitForSeconds(crochet * 8);
+        yield return new WaitForSeconds(crochet * 10);
 
         if (barCount < endBar)
         {
@@ -285,7 +297,7 @@ public class TutorialConductor : MonoBehaviour
         {
             if (spawnHistory[i] == 1)
             {
-                int randomNum = Random.Range(1, 5);
+                int randomNum = Random.Range(1, 6);
                 if(randomNum == 4)
                 {
                     Instantiate(footEnemyPrefab, leftTop.transform.position, Quaternion.identity);
@@ -297,7 +309,7 @@ public class TutorialConductor : MonoBehaviour
             }
             else if (spawnHistory[i] == 2)
             {
-                int randomNum = Random.Range(1, 5);
+                int randomNum = Random.Range(1, 6);
                 if(randomNum == 4)
                 {
                     Instantiate(footEnemyPrefab, leftBottom.transform.position, Quaternion.identity);
@@ -309,7 +321,7 @@ public class TutorialConductor : MonoBehaviour
             }
             else if (spawnHistory[i] == 3)
             {
-                int randomNum = Random.Range(1, 5);
+                int randomNum = Random.Range(1, 6);
                 if(randomNum == 4)
                 {
                     Instantiate(footEnemyPrefab, rightTop.transform.position, Quaternion.identity);
@@ -321,7 +333,7 @@ public class TutorialConductor : MonoBehaviour
             }
             else if (spawnHistory[i] == 4)
             {
-                int randomNum = Random.Range(1, 5);
+                int randomNum = Random.Range(1, 6);
                 if(randomNum == 4)
                 {
                     Instantiate(footEnemyPrefab, rightBottom.transform.position, Quaternion.identity);
