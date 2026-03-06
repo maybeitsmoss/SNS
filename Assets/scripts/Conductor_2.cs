@@ -89,7 +89,7 @@ public class Conductor_2 : MonoBehaviour
         }
 
 
-            yield return new WaitForSeconds(crochet * 2);
+        yield return new WaitForSeconds(crochet * 2);
 
         //beatDuration = 1 / crochet;
 
@@ -104,7 +104,9 @@ public class Conductor_2 : MonoBehaviour
         if (gameOver == false)
         {
             int currentScene = SceneManager.GetActiveScene().buildIndex;
+            attemptTracker.Reset();
             levelManagerScript.NextLevel();
+            
             //levelManagerScript.StartCoroutine("SceneTransition");
         }
         

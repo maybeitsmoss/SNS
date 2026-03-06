@@ -16,6 +16,8 @@ public class health : MonoBehaviour
     public GameObject cussPrefabR;
     private bool cussToggle = false;
 
+    public GameObject nextSceneButton;
+
     public GameObject boothPrefab;
     private Animator boothAnim;
     public GameObject backGround;
@@ -93,10 +95,21 @@ public class health : MonoBehaviour
 
     IEnumerator GameOver()
     {
+        attemptTracker.onDeath();
+
         yield return new WaitForSeconds(1f);
 
         int random = Random.Range(0, 2);
-                
+        
+        if(attemptTracker.allowSkip == true)
+        {
+            nextSceneButton.SetActive(true);
+        }
+        else
+        {
+            nextSceneButton.SetActive(false);
+        }
+
         if (random == 0)
         {
             bgAnim.Play("ebb");

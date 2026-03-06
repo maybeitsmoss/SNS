@@ -26,6 +26,8 @@ public class followMouse : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         
     }
@@ -54,6 +56,7 @@ public class followMouse : MonoBehaviour
         }
         else
         {
+            Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
         
