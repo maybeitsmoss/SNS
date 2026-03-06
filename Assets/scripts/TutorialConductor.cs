@@ -102,7 +102,7 @@ public class TutorialConductor : MonoBehaviour
 
     IEnumerator EndLevel()
     {
-        yield return new WaitForSeconds(crochet * 16);
+        yield return new WaitForSeconds(crochet * 24);
 
         if (gameOver == false)
         {

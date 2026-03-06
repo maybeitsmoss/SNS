@@ -1868,6 +1868,7 @@ GameObject:
   - component: {fileID: 2142115052}
   - component: {fileID: 2142115051}
   - component: {fileID: 2142115053}
+  - component: {fileID: 2142115054}
   m_Layer: 0
   m_Name: tutorialConductor
   m_TagString: Untagged
@@ -1903,7 +1904,7 @@ MonoBehaviour:
   exclaimPrefab: {fileID: 2926374175746151138, guid: c0eb88d1b71911148a985001a8000881, type: 3}
   levelManagerScript: {fileID: 199845939}
   barToIgnore: 0
-  endBar: 70
+  endBar: 54
   difficultyChange: 
   barsToPlay: 23000000290000002f000000
   boothPrefab: {fileID: 768062384}
@@ -2019,6 +2020,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2142115054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142115050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0a393a1b7ccf843970ec9b572073dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::tutDiaogue
+  offset: 7
+  waitTime: 0
+  ebbPrefab: {fileID: 6777333021767574616, guid: fe2fdae2722c22d4cb858893063af883, type: 3}
+  flowPrefab: {fileID: 6422529355956519123, guid: be2649d863e3ca2438844c153c85df3a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

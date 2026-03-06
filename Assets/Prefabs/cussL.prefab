@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::popUp
   speed: 30
-  timeToWait: 0.4
+  timeToWait: 0.5
   offset: 0
