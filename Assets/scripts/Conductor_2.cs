@@ -29,7 +29,7 @@ public class Conductor_2 : MonoBehaviour
     public GameObject footEnemyPrefab;
     public GameObject exclaimPrefab;
 
-   
+    public levelManager levelManagerScript;
 
     public int barToIgnore;
     public int endBar;
@@ -104,7 +104,7 @@ public class Conductor_2 : MonoBehaviour
         if (gameOver == false)
         {
             int currentScene = SceneManager.GetActiveScene().buildIndex;
-            levelManager.SceneTransition(currentScene + 1);
+            levelManagerScript.SceneTransition(currentScene + 1);
         }
         
     }

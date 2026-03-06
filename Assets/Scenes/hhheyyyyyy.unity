@@ -492,6 +492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::health
   mouseScript: {fileID: 1269011069}
   centerScript: {fileID: 1625246301}
+  cussPrefabL: {fileID: 6824281544476452662, guid: e9a759e78470c5549826eeb3788f026b, type: 3}
+  cussPrefabR: {fileID: 5312862310703999451, guid: d44e05d91dd3fc84aab4f4de62c0f83b, type: 3}
 --- !u!114 &243670246
 MonoBehaviour:
   m_ObjectHideFlags: 0

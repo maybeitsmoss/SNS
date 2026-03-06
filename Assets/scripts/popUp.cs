@@ -6,7 +6,7 @@ public class popUp : MonoBehaviour
     public float speed = 10f;
     public float timeToWait;
     public float offset;
-    private bool gameOver = false;
+    //private bool gameOver = false;
     private SpriteRenderer spriteRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

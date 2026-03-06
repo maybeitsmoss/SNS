@@ -3,24 +3,24 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
-public static class levelManager
+public class levelManager : MonoBehaviour
 {
-    public static void LoadScene(int sceneIndex)
+    public void LoadScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneIndex);
     }
 
-    public static void Restart()
+    public void Restart()
     {
         LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public static void NextLevel()
+    public void NextLevel()
     {
         LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public static void SceneTransition(int sceneIndex)
+    public void SceneTransition(int sceneIndex)
     {
         Debug.Log("animaiton insert here");
 
