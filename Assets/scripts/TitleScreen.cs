@@ -1,12 +1,26 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class TitleScreen : MonoBehaviour
 {
+    public GameObject circleWipe;
+    private Animator circleAnimator;
+
+    void Start()
+    {
+        if(SceneManager.GetActiveScene().name == "TitleScreen")
+        {
+            circleAnimator = circleWipe.GetComponent<Animator>();
+            circleWipe.SetActive(false);
+        }
+        
+    }
 
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("thissomebullshit");
+        //SceneManager.LoadSceneAsync("thissomebullshit");
+        StartCoroutine(SceneTransition("thissomebullshit"));
     }
     public void LoadScene()
     {
@@ -22,6 +36,27 @@ public class TitleScreen : MonoBehaviour
     }
     public void QuitGame()
     {
-        Application.Quit();
+        StartCoroutine(SceneTransition("quit"));
+    }
+
+    IEnumerator SceneTransition(string sceneName)
+    {
+        circleWipe.SetActive(true);
+
+        circleAnimator.SetBool("wipe", true);
+        
+
+        yield return new WaitForSeconds(2f);
+
+        if (sceneName == "quit")
+        {
+            Application.Quit();
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+            Debug.Log("loaded");
+        }
+        
     }
 }

@@ -5,29 +5,44 @@ using System.Collections.Generic;
 
 public class levelManager : MonoBehaviour
 {
+    public GameObject circleWipe;
+    private Animator circleAnimator;
+
+    void Start()
+    {
+        circleAnimator = circleWipe.GetComponent<Animator>();
+        circleAnimator.SetBool("wipe", false);
+    }
+
     public void LoadScene(int sceneIndex)
     {
-        SceneManager.LoadScene(sceneIndex);
+        Cursor.visible = false;
+        StartCoroutine(SceneTransition(sceneIndex));
     }
 
     public void Restart()
     {
-        LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Cursor.visible = false;
+        StartCoroutine(SceneTransition(SceneManager.GetActiveScene().buildIndex));
     }
 
     public void NextLevel()
     {
-        LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Cursor.visible = false;
+        StartCoroutine(SceneTransition(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    public void SceneTransition(int sceneIndex)
+    IEnumerator SceneTransition(int sceneIndex)
     {
-        Debug.Log("animaiton insert here");
+        //int sceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if (SceneManager.GetActiveScene().buildIndex < 5)
-        {
-            LoadScene(sceneIndex);
-        }
+        circleAnimator.SetBool("wipe", true);
+        
+
+        yield return new WaitForSeconds(2f);
+
+        SceneManager.LoadScene(sceneIndex);
+        Debug.Log("loaded");
         
     }
 }

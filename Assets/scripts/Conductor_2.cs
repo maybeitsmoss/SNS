@@ -104,7 +104,8 @@ public class Conductor_2 : MonoBehaviour
         if (gameOver == false)
         {
             int currentScene = SceneManager.GetActiveScene().buildIndex;
-            levelManagerScript.SceneTransition(currentScene + 1);
+            levelManagerScript.NextLevel();
+            //levelManagerScript.StartCoroutine("SceneTransition");
         }
         
     }
