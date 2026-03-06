@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::levelManager
   circleWipe: {fileID: 1174260292}
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 1281963780}
   conductor: {fileID: 0}
 --- !u!4 &199845940
 Transform:
@@ -779,9 +779,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 199845939}
         m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
-        m_MethodName: MainMenu
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1739,7 +1739,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 199845939}
         m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -3182,7 +3182,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 199845939}
         m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1

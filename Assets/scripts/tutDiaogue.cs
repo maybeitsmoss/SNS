@@ -112,11 +112,11 @@ public class tutDiaogue : MonoBehaviour
         waitTime = 7.61f;
         InstantiateEbb();
 
-        yield return new WaitForSeconds(5.23f);
+        yield return new WaitForSeconds(5.63f);
 
         StartCoroutine(TypeDialogue("...dingey.", 1));
 
-        yield return new WaitForSeconds(2.38f);
+        yield return new WaitForSeconds(1.98f);
 
         StartCoroutine(TypeDialogue("Well SHER-ROCK HOLMES, thats cause it ain’t the real thing.", 0));
         waitTime = 7.26f;
@@ -155,13 +155,13 @@ public class tutDiaogue : MonoBehaviour
 
         yield return new WaitForSeconds(6.46f);
         
-        StartCoroutine(TypeDialogue("Oh yeah we cookin’ like hot grease now! Them foes ain’t always gonna come out in slow patterns though...", 0));
+        StartCoroutine(TypeDialogue("Oh yeah we cookin’ like hot grease now! Them foes ain’t always gonna come up in the same slow patterns though...", 0));
         waitTime = 5.64f;
         InstantiateFlow();
 
         yield return new WaitForSeconds(5.64f);
 
-        StartCoroutine(TypeDialogue("Nor are they gonna be able to go down with just that sword! Them teal ones you’s gonna have to KICK!", 1));
+        StartCoroutine(TypeDialogue("Nor are they gonna be able to go down with just that sword! Them teal ones you’re gonna have to KICK!", 1));
         waitTime = 5.42f;
         InstantiateEbb();
 
@@ -180,7 +180,7 @@ public class tutDiaogue : MonoBehaviour
 
         yield return new WaitForSeconds(5.05f);
 
-        StartCoroutine(TypeDialogue("We’ll give you a warning or two, since we can get a good sense of when the big bads gon come on in...", 0));
+        StartCoroutine(TypeDialogue("We’ll give you a warning or two, since we can get a good sense of when the big bads gon start coming in...", 0));
         waitTime = 6.76f;
         InstantiateFlow();
 

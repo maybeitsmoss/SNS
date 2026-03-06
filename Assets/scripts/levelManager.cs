@@ -10,9 +10,17 @@ public class levelManager : MonoBehaviour
     private bool paused = false;
     public GameObject pauseMenu;
     public Conductor_2 conductor;
+    private GameObject tutorialConductor;
+    private AudioSource tutorialAudio;
 
     void Start()
     {
+        if (SceneManager.GetActiveScene().name == "thissomebullshit")
+        {
+            tutorialConductor = GameObject.Find("tutorialConductor");
+            tutorialAudio = tutorialConductor.GetComponent<AudioSource>();
+        }
+
         pauseMenu.SetActive(false);
         circleAnimator = circleWipe.GetComponent<Animator>();
         circleAnimator.SetBool("wipe", false);
@@ -68,7 +76,10 @@ public class levelManager : MonoBehaviour
 
     public void Restart()
     {
-        conductor.StartCoroutine("FadeOut");
+        if (SceneManager.GetActiveScene().name != "thissomebullshit")
+        {
+            conductor.StartCoroutine("FadeOut");
+        }
         Resume();
         Cursor.visible = false;
         StartCoroutine(SceneTransition(SceneManager.GetActiveScene().buildIndex));
@@ -83,7 +94,10 @@ public class levelManager : MonoBehaviour
 
     public void MainMenu()
     {
-        conductor.StartCoroutine("FadeOut");
+        if (SceneManager.GetActiveScene().name != "thissomebullshit")
+        {
+            conductor.StartCoroutine("FadeOut");
+        }
         Resume();
         Cursor.visible = false;
         StartCoroutine(SceneTransition(0));
@@ -94,6 +108,18 @@ public class levelManager : MonoBehaviour
         //int sceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         circleAnimator.SetBool("wipe", true);
+
+        if (SceneManager.GetActiveScene().name == "thissomebullshit")
+        {
+            float volume = tutorialAudio.volume;
+
+            while (volume > 0f)
+            {
+                volume -= 0.001f;
+                tutorialAudio.volume = volume;
+                yield return null;
+            }
+        }
         
 
         yield return new WaitForSeconds(2f);
@@ -104,6 +130,9 @@ public class levelManager : MonoBehaviour
         {
             attemptTracker.Reset();
         }
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Debug.Log("loaded");
         
     }

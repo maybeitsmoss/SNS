@@ -2125,7 +2125,7 @@ MonoBehaviour:
   barOffset: 2
   beatOffset: -1
   offset: 3
-  fadeOutDuration: 2.8
+  fadeOutDuration: 2.6
   djTurn: 0
   leftTop: {fileID: 158278665}
   leftBottom: {fileID: 202384319}
