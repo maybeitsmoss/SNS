@@ -3242,7 +3242,7 @@ MonoBehaviour:
   bubblePrefab: {fileID: 5589781884418098204, guid: e8c3a5272d2d176458292c0f5938feac, type: 3}
   ebbText: {fileID: 134518667}
   flowText: {fileID: 1168549803}
-  typingSpeed: 0.035
+  typingSpeed: 0.02
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

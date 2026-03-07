@@ -116,7 +116,7 @@ public class levelManager : MonoBehaviour
 
             while (volume > 0f)
             {
-                volume -= 0.001f;
+                volume -= 0.01f;
                 tutorialAudio.volume = volume;
                 yield return null;
             }
