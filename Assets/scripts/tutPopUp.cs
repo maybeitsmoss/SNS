@@ -32,6 +32,18 @@ public class tutPopUp : MonoBehaviour
         }
     }*/
 
+    void Update()
+    {
+        if (gameObject.tag == "speechBubble" && transform.position.x > 0f)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (gameObject.tag == "speechBubble" && transform.position.x < 0f)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+    }
+
     // Update is called once per frame
     IEnumerator doPopUp()
     {

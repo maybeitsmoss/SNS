@@ -8,6 +8,7 @@ public class tutDiaogue : MonoBehaviour
     public float waitTime;
     public GameObject ebbPrefab;
     public GameObject flowPrefab;
+    public GameObject bubblePrefab;
     public TextMeshProUGUI ebbText;
     public TextMeshProUGUI flowText;
     public float typingSpeed;
@@ -31,45 +32,62 @@ public class tutDiaogue : MonoBehaviour
 
     IEnumerator StartDialogue(float offset)
     {
+        Vector3 flowPos = new Vector3(-15.4f, 18.8f, 0f);
+        Vector3 ebbPos = new Vector3(15.4f, 18.8f, 0f);
+
         yield return new WaitForSeconds(offset);
         StartCoroutine(TypeDialogue("TESTIN’, TESTIN’! Mic check, one, TWO!", 1));
         waitTime = 3.35f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(3.35f);
         
         StartCoroutine(TypeDialogue("Yo, you hear us good down there, right? Actually, why am I asking that like we not gods?- We could be in SURROUND SOUND if we wanted to be!", 0));
         waitTime = 8.05f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(8.05f);
         
         StartCoroutine(TypeDialogue("Flow, we’ve been trapped in a turn table for the past 48 HOURS cause some tone-deaf dummy tried to take the soul stereo, and we wouldn’t let em’!", 1));
         waitTime = 7.48f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(7.48f);
 
         StartCoroutine(TypeDialogue("Well when ya put it like that it makes us sound incompetent…", 0));
         waitTime = 3.23f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(3.23f);
 
         StartCoroutine(TypeDialogue("…Well, since were not keepin’ secrets, ya do have a habit of-", 1));
         waitTime = 3.60f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(3.60f);
 
         StartCoroutine(TypeDialogue("I said us, don’t you put that smut on just me! Besides, we out now ain’t we not?", 0));
         waitTime = 4.91f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(4.91f);
 
         StartCoroutine(TypeDialogue("Yeah yeah, whatever. Anyways, you down there! Whatcha said your name was again? ", 1));
         waitTime = 5.16f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(5.16f);
@@ -84,12 +102,16 @@ public class tutDiaogue : MonoBehaviour
 
         StartCoroutine(TypeDialogue("Not one for talkin’ much, eh? Well it ain’t our problem! We just gon’ call you...cutter!", 0));
         waitTime = 6.36f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(6.36f);
 
         StartCoroutine(TypeDialogue("And, cutter, since ya picked up the sword and stuff, you’re pretty much responsible for your world not collapsin’ now!", 1));
         waitTime = 10.40f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(6.58f);
@@ -100,6 +122,8 @@ public class tutDiaogue : MonoBehaviour
 
         StartCoroutine(TypeDialogue("OH! See that thing spinning in the center of the room behind ya? Yeah, that big record?", 0));
         waitTime = 10.61f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(4.71f);
@@ -110,6 +134,8 @@ public class tutDiaogue : MonoBehaviour
 
         StartCoroutine(TypeDialogue("Without it, you’d all up and die!... But I don’t remember it lookin’ so...", 1));
         waitTime = 7.61f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(5.63f);
@@ -120,6 +146,8 @@ public class tutDiaogue : MonoBehaviour
 
         StartCoroutine(TypeDialogue("Well SHER-ROCK HOLMES, thats cause it ain’t the real thing.", 0));
         waitTime = 7.26f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(3.05f);
@@ -130,6 +158,8 @@ public class tutDiaogue : MonoBehaviour
 
         StartCoroutine(TypeDialogue("Right, right. I guess we don’t got a choice either with little miss discordance threatinin’ to show her face again...", 1));
         waitTime = 9.95f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(6.46f);
@@ -140,6 +170,8 @@ public class tutDiaogue : MonoBehaviour
 
         StartCoroutine(TypeDialogue("Like always. But since we know that it gives us an upper hand!", 0));
         waitTime = 9.45f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(3.70f);
@@ -157,12 +189,16 @@ public class tutDiaogue : MonoBehaviour
         
         StartCoroutine(TypeDialogue("Oh yeah we cookin’ like hot grease now! Them foes ain’t always gonna come up in the same slow patterns though...", 0));
         waitTime = 5.64f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(5.64f);
 
         StartCoroutine(TypeDialogue("Nor are they gonna be able to go down with just that sword! Them teal ones you’re gonna have to KICK!", 1));
         waitTime = 5.42f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(5.42f);
@@ -176,12 +212,16 @@ public class tutDiaogue : MonoBehaviour
         
         StartCoroutine(TypeDialogue("Ya know what, I was havin’ my doubts but this kids’ pretty good! Let's pick up the pace a bit…", 1));
         waitTime = 5.05f;
+
+        Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
         InstantiateEbb();
 
         yield return new WaitForSeconds(5.05f);
 
         StartCoroutine(TypeDialogue("We’ll give you a warning or two, since we can get a good sense of when the big bads gon start coming in...", 0));
         waitTime = 6.76f;
+
+        Instantiate(bubblePrefab, flowPos, Quaternion.identity);
         InstantiateFlow();
 
         yield return new WaitForSeconds(4.21f);

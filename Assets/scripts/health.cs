@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour
 {
@@ -103,11 +104,18 @@ public class health : MonoBehaviour
         
         if(attemptTracker.allowSkip == true)
         {
-            nextSceneButton.SetActive(true);
+            if(SceneManager.GetActiveScene().name != "hhheyyyyyy")
+            {
+                nextSceneButton.SetActive(true);
+            }
+            
         }
         else
         {
-            nextSceneButton.SetActive(false);
+            if(SceneManager.GetActiveScene().name != "hhheyyyyyy")
+            {
+                nextSceneButton.SetActive(false);
+            }
         }
 
         if (random == 0)

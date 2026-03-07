@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 168}
+  m_AnchoredPosition: {x: 20, y: 140.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &134518667
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -67.50371, y: 0, z: -260.17053, w: -98.44296}
+  m_margin: {x: -35.788025, y: 0, z: -195.1189, w: -43.1249}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1889,7 +1889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -226, y: 167}
+  m_AnchoredPosition: {x: -262.8, y: 140.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168549803
@@ -1978,7 +1978,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -323.4553, w: -106.880905}
+  m_margin: {x: 46.61728, y: 0, z: -278.5972, w: -65.54108}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3627,6 +3627,7 @@ MonoBehaviour:
   waitTime: 0
   ebbPrefab: {fileID: 6777333021767574616, guid: fe2fdae2722c22d4cb858893063af883, type: 3}
   flowPrefab: {fileID: 6422529355956519123, guid: be2649d863e3ca2438844c153c85df3a, type: 3}
+  bubblePrefab: {fileID: 5589781884418098204, guid: e8c3a5272d2d176458292c0f5938feac, type: 3}
   ebbText: {fileID: 134518667}
   flowText: {fileID: 1168549803}
   typingSpeed: 0.035

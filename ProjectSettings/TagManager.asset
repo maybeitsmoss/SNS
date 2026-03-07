@@ -13,6 +13,7 @@ TagManager:
   - portal
   - ebb
   - flow
+  - speechBubble
   layers:
   - Default
   - TransparentFX
