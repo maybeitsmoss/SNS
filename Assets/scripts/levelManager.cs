@@ -89,6 +89,7 @@ public class levelManager : MonoBehaviour
     {
         Resume();
         Cursor.visible = false;
+        attemptTracker.Reset();
         StartCoroutine(SceneTransition(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
@@ -126,10 +127,17 @@ public class levelManager : MonoBehaviour
 
         SceneManager.LoadScene(sceneIndex);
 
-        if(attemptTracker.allowSkip == true)
-        {
-            attemptTracker.Reset();
-        }
+        //desired behavior: after three deaths, allow the player to skip the level. they may continue to retry the level as many times as
+        //                  they like with the skip function remaining available, until they either skip the level or beat it.
+
+        //current behavior: the option to skip the level appears only once every three attempts
+
+        //problem: when the player progresses to the next level, if the player was allowed to skip, the counter is reset.
+        //          this means when the player is able to skip but instead choose to replay, the counter is reset, because 
+        //          the scene changes while allowSkip == true.
+
+
+        
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
