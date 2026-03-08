@@ -44,7 +44,7 @@ public class health : MonoBehaviour
     {
         if (healthCount > 0)
         {
-            //healthCount -= 10f;
+            healthCount -= 10f;
 
             Vector3 squishedScale = new Vector3(healthCount / 100f, 1, 1);
 

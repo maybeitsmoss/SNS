@@ -2428,7 +2428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59eab5deeddcf5341bdc969e4ec08081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Conductor_3
-  BPM: 179.75
+  BPM: 179.8
   crochet: 0
   barOffset: 3
   beatOffset: -1
