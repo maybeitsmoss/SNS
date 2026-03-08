@@ -140,9 +140,17 @@ PrefabInstance:
       propertyPath: offset
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4688677304714628511, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: timeToWait
+      value: 105
+      objectReference: {fileID: 0}
     - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_Name
       value: SNS_portal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6567834553723802651, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,9 +311,17 @@ PrefabInstance:
       propertyPath: offset
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4688677304714628511, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: timeToWait
+      value: 105
+      objectReference: {fileID: 0}
     - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_Name
       value: SNS_portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6567834553723802651, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -863,9 +879,17 @@ PrefabInstance:
       propertyPath: offset
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4688677304714628511, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: timeToWait
+      value: 105
+      objectReference: {fileID: 0}
     - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_Name
       value: SNS_portal (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6567834553723802651, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1762,9 +1786,17 @@ PrefabInstance:
       propertyPath: offset
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4688677304714628511, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: timeToWait
+      value: 105
+      objectReference: {fileID: 0}
     - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_Name
       value: SNS_portal (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993846687093811204, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6567834553723802651, guid: 9b0cedf1c3fc3f842a20e303405e0fa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2396,7 +2428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59eab5deeddcf5341bdc969e4ec08081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Conductor_3
-  BPM: 179
+  BPM: 179.75
   crochet: 0
   barOffset: 3
   beatOffset: -1

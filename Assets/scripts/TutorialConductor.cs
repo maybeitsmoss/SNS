@@ -66,7 +66,7 @@ public class TutorialConductor : MonoBehaviour
 
         yield return new WaitForSeconds(offset);
 
-        music.Play();
+        
         StartCoroutine(Metronome());
         Debug.Log("started metronome");
 
@@ -80,6 +80,8 @@ public class TutorialConductor : MonoBehaviour
 
             restart = true;
         }
+
+        music.Play();
     }
 
     IEnumerator Metronome()

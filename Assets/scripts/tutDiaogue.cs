@@ -1,9 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class tutDiaogue : MonoBehaviour
 {
+    public float BPM;
+    private float crochet;
     public float offset;
     public float waitTime;
     public GameObject ebbPrefab;
@@ -12,10 +16,40 @@ public class tutDiaogue : MonoBehaviour
     public TextMeshProUGUI ebbText;
     public TextMeshProUGUI flowText;
     public float typingSpeed;
+
+    public GameObject leftTop;
+    public GameObject leftBottom;
+    public GameObject rightTop;
+    public GameObject rightBottom;
+
+    public GameObject playerBubble;
+    public GameObject exclaimPrefab;
+    public GameObject blueExclaimPrefab;
+    public GameObject enemyPrefab;
+    public GameObject footEnemyPrefab;
+    public GameObject boothPrefab;
+
+    public levelManager levelManagerScript;
+
+    private AudioSource music;
+
+    private bool gameOver = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        crochet = 60f / BPM;
+        playerBubble.SetActive(false);
+        boothPrefab.SetActive(false);
+        music = GetComponent<AudioSource>();
+        music.Play();
         StartCoroutine(StartDialogue(offset));
+        //beatCount = beatOffset;
+        //barCount = 1;
+        //crochet = 60f / BPM;
+        //beatDuration = crochet;
+        //difficulty = 0;
+        //music.Play();
     }
 
     public void InstantiateEbb()
@@ -36,6 +70,7 @@ public class tutDiaogue : MonoBehaviour
         Vector3 ebbPos = new Vector3(15.4f, 18.8f, 0f);
 
         yield return new WaitForSeconds(offset);
+
         StartCoroutine(TypeDialogue("TESTIN’, TESTIN’! Mic check, one, TWO!", 1));
         waitTime = 3.35f;
 
@@ -96,9 +131,12 @@ public class tutDiaogue : MonoBehaviour
         flowText.text = "";
         Debug.Log("...");
         waitTime = 3.63f;
+        playerBubble.SetActive(true);
        
 
         yield return new WaitForSeconds(3.63f);
+
+        playerBubble.SetActive(false);
 
         StartCoroutine(TypeDialogue("Not one for talkin’ much, eh? Well it ain’t our problem! We just gon’ call you...cutter!", 0));
         waitTime = 6.36f;
@@ -185,7 +223,44 @@ public class tutDiaogue : MonoBehaviour
         Debug.Log("...");
         waitTime = 6.46f;
 
-        yield return new WaitForSeconds(6.46f);
+        yield return new WaitForSeconds (0.2f);
+
+        //ATTACK 1
+        Instantiate(exclaimPrefab, leftTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(enemyPrefab, leftTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(exclaimPrefab, rightTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(enemyPrefab, rightTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(exclaimPrefab, leftBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(enemyPrefab, leftBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(exclaimPrefab, rightBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+
+        ///RESUME DIALOGUE
+        yield return new WaitForSeconds(0.07f);
         
         StartCoroutine(TypeDialogue("Oh yeah we cookin’ like hot grease now! Them foes ain’t always gonna come up in the same slow patterns though...", 0));
         waitTime = 5.64f;
@@ -208,7 +283,44 @@ public class tutDiaogue : MonoBehaviour
         Debug.Log("...");
         waitTime = 7.46f;
 
-        yield return new WaitForSeconds(7.46f);
+        yield return new WaitForSeconds(.75f);
+
+        //ATTACK 2
+        Instantiate(blueExclaimPrefab, leftTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(footEnemyPrefab, leftTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(exclaimPrefab, rightTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(enemyPrefab, rightTop.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(blueExclaimPrefab, leftBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(footEnemyPrefab, leftBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(exclaimPrefab, rightBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+        Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds (0.77f);
+
+
+        //resume dialogue
+        yield return new WaitForSeconds(.55f);
         
         StartCoroutine(TypeDialogue("Ya know what, I was havin’ my doubts but this kids’ pretty good! Let's pick up the pace a bit…", 1));
         waitTime = 5.05f;
@@ -234,6 +346,151 @@ public class tutDiaogue : MonoBehaviour
         flowText.text = "";
         Debug.Log("...");
 
+        for (int i = 0; i < 4; i++)
+        {
+            List<int> spawnList = new List<int>();
+            List<int> enemyList = new List<int>();
+
+            for (int j = 0; j < 4; j++)
+            {
+                int randomSpawn = Random.Range(1, 5);
+                spawnList.Add(randomSpawn);
+
+                int randomEnemy = Random.Range(1, 5);
+                enemyList.Add(randomEnemy);
+            }
+
+            exclaim(spawnList[0], enemyList[0]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+
+            exclaim(spawnList[1], enemyList[1]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+
+            exclaim(spawnList[2], enemyList[2]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+
+            exclaim(spawnList[3], enemyList[3]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+
+            spawnEnemy(spawnList[0], enemyList[0]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+
+            spawnEnemy(spawnList[1], enemyList[1]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+
+            spawnEnemy(spawnList[2], enemyList[2]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+
+            spawnEnemy(spawnList[3], enemyList[3]);
+
+            yield return new WaitForSecondsRealtime(crochet * 2);
+        }
+
+        yield return new WaitForSeconds(crochet* 12);
+
+        StartCoroutine(EndLevel());
+
+    }
+
+    void exclaim(int location, int enemyType)
+    {
+        switch (location)
+        {
+            case 1:
+                if(enemyType == 1)
+                {
+                    Instantiate(blueExclaimPrefab, leftTop.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(exclaimPrefab, leftTop.transform.position, Quaternion.identity);
+                }
+                break;
+            case 2:
+                if(enemyType == 1)
+                {
+                    Instantiate(blueExclaimPrefab, rightTop.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(exclaimPrefab, rightTop.transform.position, Quaternion.identity);
+                }
+                break;
+            case 3:
+                if(enemyType == 1)
+                {
+                    Instantiate(blueExclaimPrefab, leftBottom.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(exclaimPrefab, leftBottom.transform.position, Quaternion.identity);
+                }
+                break;
+            case 4:
+                if(enemyType == 1)
+                {
+                    Instantiate(blueExclaimPrefab, rightBottom.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(exclaimPrefab, rightBottom.transform.position, Quaternion.identity);
+                }
+                break;
+        }
+    }
+
+    void spawnEnemy(int location, int enemyType)
+    {
+        switch (location)
+        {
+            case 1:
+                if(enemyType == 1)
+                {
+                    Instantiate(footEnemyPrefab, leftTop.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, leftTop.transform.position, Quaternion.identity);
+                }
+                break;
+            case 2:
+                if(enemyType == 1)
+                {
+                    Instantiate(footEnemyPrefab, rightTop.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, rightTop.transform.position, Quaternion.identity);
+                }
+                break;
+            case 3:
+                if(enemyType == 1)
+                {
+                    Instantiate(footEnemyPrefab, leftBottom.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, leftBottom.transform.position, Quaternion.identity);
+                }
+                break;
+            case 4:
+                if(enemyType == 1)
+                {
+                    Instantiate(footEnemyPrefab, rightBottom.transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
+                }
+                break;
+        }
     }
 
     IEnumerator TypeDialogue(string quote, int toggle)
@@ -269,9 +526,21 @@ public class tutDiaogue : MonoBehaviour
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
+    }
 
+    IEnumerator EndLevel()
+    {
+        yield return new WaitForSecondsRealtime(crochet * 16);
 
-
+        if (gameOver == false)
+        {
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            attemptTracker.Reset();
+            levelManagerScript.NextLevel();
+            
+            //levelManagerScript.StartCoroutine("SceneTransition");
+        }
+        
     }
 
 
