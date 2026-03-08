@@ -6,7 +6,8 @@ public class squashStretch : MonoBehaviour
 {
     //amount of squash! (fraction of original Y scale)
     public float squishAmount;
-    public Conductor_2 conductorScript;
+    //public Conductor_2 conductorScript;
+    public Conductor_3 conductorScript;
     public TutorialConductor tutorialScript;
     private bool offset = true;
 

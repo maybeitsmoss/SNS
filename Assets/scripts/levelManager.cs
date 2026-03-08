@@ -9,7 +9,8 @@ public class levelManager : MonoBehaviour
     private Animator circleAnimator;
     private bool paused = false;
     public GameObject pauseMenu;
-    public Conductor_2 conductor;
+    //public Conductor_2 conductor;
+    public Conductor_3 conductor;
     private GameObject tutorialConductor;
     private AudioSource tutorialAudio;
 

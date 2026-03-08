@@ -44,7 +44,7 @@ public class health : MonoBehaviour
     {
         if (healthCount > 0)
         {
-            healthCount -= 10f;
+            //healthCount -= 10f;
 
             Vector3 squishedScale = new Vector3(healthCount / 100f, 1, 1);
 
@@ -70,8 +70,8 @@ public class health : MonoBehaviour
         {
             if (gameOver == false)
             {
-                Conductor_2[] conductorScript = FindObjectsOfType<Conductor_2>();
-                foreach (Conductor_2 scriptInstance in conductorScript)
+                Conductor_3[] conductorScript = FindObjectsOfType<Conductor_3>();
+                foreach (Conductor_3 scriptInstance in conductorScript)
                 {
                     scriptInstance.StartCoroutine("FadeOut");
                 }

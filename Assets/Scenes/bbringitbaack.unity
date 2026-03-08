@@ -1072,15 +1072,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 912467081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b0f9949ac589e345aa644e82ca43669, type: 3}
+  m_Script: {fileID: 11500000, guid: 59eab5deeddcf5341bdc969e4ec08081, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Conductor_2
-  BPM: 167
+  m_EditorClassIdentifier: Assembly-CSharp::Conductor_3
+  BPM: 169
   crochet: 0
-  barOffset: 2
+  barOffset: 3
   beatOffset: 0
   offset: 3
-  fadeOutDuration: 2.6
+  fadeOutDuration: 2.5
   djTurn: 0
   leftTop: {fileID: 953960169}
   leftBottom: {fileID: 80886302}
@@ -1089,10 +1089,11 @@ MonoBehaviour:
   enemyPrefab: {fileID: 4336254073953163242, guid: fa8ea44e4a8f34840bd399278797c510, type: 3}
   footEnemyPrefab: {fileID: 7508625911483996719, guid: d313bb267b9a4a048a8c69a17d143f24, type: 3}
   exclaimPrefab: {fileID: 2926374175746151138, guid: c0eb88d1b71911148a985001a8000881, type: 3}
+  blueExclaimPrefab: {fileID: 2926374175746151138, guid: 16b34da1446df5147b7176df81180ef7, type: 3}
   levelManagerScript: {fileID: 606857008}
-  barToIgnore: 23
-  endBar: 40
-  difficultyChange: 1200000024000000
+  barToIgnore: 0
+  endBar: 39
+  difficultyChange: 0a0000000700000001000000
 --- !u!1 &953960169 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5155273020179456074, guid: 2312df7442b1ac04189558ba08437e38, type: 3}
@@ -3010,7 +3011,7 @@ PrefabInstance:
     - target: {fileID: 7704623899383742870, guid: c8ff1e66c75a25440a5e8e026a1ae669, type: 3}
       propertyPath: conductorScript
       value: 
-      objectReference: {fileID: 912467084}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7704623899383742870, guid: c8ff1e66c75a25440a5e8e026a1ae669, type: 3}
     m_RemovedGameObjects: []
