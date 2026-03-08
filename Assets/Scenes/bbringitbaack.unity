@@ -1077,7 +1077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Conductor_2
   BPM: 167
   crochet: 0
-  barOffset: 3
+  barOffset: 2
   beatOffset: 0
   offset: 3
   fadeOutDuration: 2.6

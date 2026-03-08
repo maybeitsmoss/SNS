@@ -189,7 +189,7 @@ public class TutorialConductor : MonoBehaviour
 
         Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(crochet * 2);
+        //yield return new WaitForSeconds(crochet * 2);
         //boothAnimator.Play("slideUp");
         
     }
@@ -226,7 +226,7 @@ public class TutorialConductor : MonoBehaviour
 
         Instantiate(enemyPrefab, rightBottom.transform.position, Quaternion.identity);
 
-        yield return new WaitForSeconds(crochet * 2);
+        //yield return new WaitForSeconds(crochet * 2);
     }
 
     IEnumerator FastAttack()

@@ -3094,7 +3094,7 @@ MonoBehaviour:
   BPM: 155
   crochet: 0
   barOffset: 0
-  beatOffset: 0
+  beatOffset: 1
   offset: 3
   fadeOutDuration: 3
   djTurn: 0
