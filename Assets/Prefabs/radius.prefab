@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b471efef48ca30e4f8ccf9a5e67a1637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  healthBar: {fileID: 0}
   healthScript: {fileID: 0}
   rotationSpeed: 50
 --- !u!212 &1775152386732798660
@@ -134,7 +135,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1801691073460219105, guid: 0f7063787911f9d408e2b1b727150f46, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7254902}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

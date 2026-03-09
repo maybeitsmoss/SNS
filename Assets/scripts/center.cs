@@ -79,7 +79,7 @@ public class center : MonoBehaviour
         spriteRenderer.color = Color.white;
 
         Color spriteColor = spriteRenderer.color;
-        spriteColor.a = 0.75f;
+        //spriteColor.a = 0.75f;
         spriteRenderer.color = spriteColor;
 
         
