@@ -539,6 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc906a72e846f454386ed27a8c2f361c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreen
+  circleWipe: {fileID: 0}
 --- !u!114 &1594481424
 MonoBehaviour:
   m_ObjectHideFlags: 0

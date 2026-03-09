@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 4.604861
       objectReference: {fileID: 0}
+    - target: {fileID: 2041510222503369374, guid: 9cf02276b7a4766438d6a7fcd9540755, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3194099247729868068, guid: 9cf02276b7a4766438d6a7fcd9540755, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 4.598593
@@ -731,7 +735,7 @@ RectTransform:
   m_GameObject: {fileID: 528586583}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4685, y: 2.3679562, z: 1.4685}
+  m_LocalScale: {x: 1.4685, y: 2.8711467, z: 1.4685}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2050726335}
