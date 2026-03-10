@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using MilkShake;
 
 public class health : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class health : MonoBehaviour
     private Animator bgAnim;
 
     private bool gameOver = false;
+
+    public Shaker cameraShaker;
+    public ShakePreset shakePreset;
 
     //public Conductor_2 conductorScript;
     
@@ -62,6 +66,8 @@ public class health : MonoBehaviour
                 Instantiate(cussPrefabR, spawn, Quaternion.identity);
                 cussToggle = true;
             }
+
+            cameraShaker.Shake(shakePreset);
             
             recordScratch.Play();
         }
