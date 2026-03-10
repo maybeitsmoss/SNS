@@ -9,7 +9,7 @@ public class deathText : MonoBehaviour
     {
         deathTextElement = GetComponent<TextMeshProUGUI>();
 
-        int randomNum = Random.Range(0, 10);
+        int randomNum = Random.Range(0, 11);
 
         switch (randomNum)
         {
@@ -42,6 +42,9 @@ public class deathText : MonoBehaviour
                 break;
             case 9:
                 deathTextElement.text = "I think my heart skipped a beat! Or was that you...?";
+                break;
+            case 10:
+                deathTextElement.text = "That was real out of tune!";
                 break;
         }
     }
