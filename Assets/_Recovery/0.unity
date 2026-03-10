@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::health
   mouseScript: {fileID: 742044359}
-  centerScript: {fileID: 675536936}
+  centerScript: {fileID: 0}
   cussPrefabL: {fileID: 6824281544476452662, guid: e9a759e78470c5549826eeb3788f026b, type: 3}
   cussPrefabR: {fileID: 5312862310703999451, guid: d44e05d91dd3fc84aab4f4de62c0f83b, type: 3}
   nextSceneButton: {fileID: 1735789034}
@@ -1461,17 +1461,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MilkShake.Shaker
   addToGlobalShakers: 0
---- !u!114 &675536936 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 472049970764394307, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
-  m_PrefabInstance: {fileID: 1902994065}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b471efef48ca30e4f8ccf9a5e67a1637, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &686714631
 GameObject:
   m_ObjectHideFlags: 0
@@ -2937,13 +2926,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 472049970764394307, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 472049970764394307, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
       propertyPath: healthScript
       value: 
-      objectReference: {fileID: 243670245}
+      objectReference: {fileID: 0}
     - target: {fileID: 1387815518039881736, guid: 84dff268f5ddb5d43a1af5a4f7e966da, type: 3}
       propertyPath: m_Name
       value: radius
