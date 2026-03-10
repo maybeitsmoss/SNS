@@ -128,40 +128,40 @@ public class Conductor_3 : MonoBehaviour
 
             exclaim(spawnList[0], enemyList[0]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             exclaim(spawnList[1], enemyList[1]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             exclaim(spawnList[2], enemyList[2]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             exclaim(spawnList[3], enemyList[3]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             spawnEnemy(spawnList[0], enemyList[0]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             spawnEnemy(spawnList[1], enemyList[1]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             spawnEnemy(spawnList[2], enemyList[2]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             spawnEnemy(spawnList[3], enemyList[3]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
         }
 
         if (SceneManager.GetActiveScene().name == "bbringitbaack")
         {
-            yield return new WaitForSecondsRealtime(crochet * 8);
+            yield return new WaitForSeconds(crochet * 8);
         }
         
 
@@ -186,43 +186,43 @@ public class Conductor_3 : MonoBehaviour
 
             exclaim(spawnList[0], enemyList[0]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             exclaim(spawnList[1], enemyList[1]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             exclaim(spawnList[2], enemyList[2]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[3], enemyList[3]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[4], enemyList[4]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             spawnEnemy(spawnList[0], enemyList[0]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             spawnEnemy(spawnList[1], enemyList[1]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
 
             spawnEnemy(spawnList[2], enemyList[2]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[3], enemyList[3]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[4], enemyList[4]);
 
-            yield return new WaitForSecondsRealtime(crochet * 2);
+            yield return new WaitForSeconds(crochet * 2);
         }
         StartCoroutine(Attack3());
     }
@@ -245,73 +245,73 @@ public class Conductor_3 : MonoBehaviour
 
             exclaim(spawnList[0], enemyList[0]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[1], enemyList[1]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[2], enemyList[2]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[3], enemyList[3]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[4], enemyList[4]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[5], enemyList[5]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[6], enemyList[6]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             exclaim(spawnList[7], enemyList[7]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[0], enemyList[0]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[1], enemyList[1]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[2], enemyList[2]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[3], enemyList[3]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[4], enemyList[4]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[5], enemyList[5]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[6], enemyList[6]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
 
             spawnEnemy(spawnList[7], enemyList[7]);
 
-            yield return new WaitForSecondsRealtime(crochet);
+            yield return new WaitForSeconds(crochet);
         }
     }
 
     IEnumerator EndLevel()
     {
-        yield return new WaitForSecondsRealtime(crochet * 16);
+        yield return new WaitForSeconds(crochet * 16);
 
         if (gameOver == false)
         {

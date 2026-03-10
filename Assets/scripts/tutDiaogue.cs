@@ -39,7 +39,7 @@ public class tutDiaogue : MonoBehaviour
     void Start()
     {
         crochet = 60f / BPM;
-        playerBubble.SetActive(false);
+        playerBubble.GetComponent<SpriteRenderer>().enabled = false;
         boothPrefab.SetActive(false);
         music = GetComponent<AudioSource>();
         music.Play();
@@ -131,12 +131,12 @@ public class tutDiaogue : MonoBehaviour
         flowText.text = "";
         Debug.Log("...");
         waitTime = 3.63f;
-        playerBubble.SetActive(true);
+        playerBubble.GetComponent<SpriteRenderer>().enabled = true;
        
 
         yield return new WaitForSeconds(3.63f);
 
-        playerBubble.SetActive(false);
+        playerBubble.GetComponent<SpriteRenderer>().enabled = false;
 
         StartCoroutine(TypeDialogue("Not one for talkin’ much, eh? Well it ain’t our problem! We just gon’ call you...cutter!", 0));
         waitTime = 6.36f;
