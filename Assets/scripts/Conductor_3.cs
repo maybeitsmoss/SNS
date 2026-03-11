@@ -317,7 +317,15 @@ public class Conductor_3 : MonoBehaviour
         {
             int currentScene = SceneManager.GetActiveScene().buildIndex;
             attemptTracker.Reset();
-            levelManagerScript.NextLevel();
+            if (SceneManager.GetActiveScene().name == "hhheyyyyyy")
+            {
+                levelManagerScript.MainMenu();
+            }
+            else
+            {
+                levelManagerScript.NextLevel();
+            }
+            
             
             //levelManagerScript.StartCoroutine("SceneTransition");
         }
