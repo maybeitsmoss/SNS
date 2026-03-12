@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: SNS
+  companyName: BPM
+  productName: Stutterz N' Swords
   defaultCursor: {fileID: 2800000, guid: c21aac222dd1eda45b2b1ad635156d5d, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.043916695, g: 0, b: 0.14150941, a: 1}
