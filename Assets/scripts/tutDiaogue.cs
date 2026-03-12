@@ -35,6 +35,10 @@ public class tutDiaogue : MonoBehaviour
 
     private bool gameOver = false;
 
+    public Animator cardboardRecordAnim;
+    public Animator realRecordAnim;
+    public Animator signAnim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -393,7 +397,13 @@ public class tutDiaogue : MonoBehaviour
             yield return new WaitForSecondsRealtime(crochet * 2);
         }
 
-        yield return new WaitForSeconds(crochet* 12);
+        yield return new WaitForSeconds(crochet* 8);
+
+        cardboardRecordAnim.SetBool("reveal", true);
+        realRecordAnim.SetBool("reveal", true);
+        signAnim.SetBool("reveal", true);
+
+        yield return new WaitForSeconds(crochet * 4);
 
         StartCoroutine(EndLevel());
 
