@@ -103,7 +103,7 @@ public class tutDiaogue : MonoBehaviour
 
         yield return new WaitForSeconds(3.23f);
 
-        StartCoroutine(TypeDialogue("…Well, since were not keepin’ secrets, ya do have a habit of-", 1));
+        StartCoroutine(TypeDialogue("…Well, since we're not keepin’ secrets, ya dooo have a habit of-", 1));
         waitTime = 3.60f;
 
         Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
@@ -138,7 +138,7 @@ public class tutDiaogue : MonoBehaviour
 
         //playerBubble.GetComponent<SpriteRenderer>().enabled = false;
 
-        StartCoroutine(TypeDialogue("Not one for talkin’ much, eh? Well it ain’t our problem! We just gon’ call you...cutter!", 0));
+        StartCoroutine(TypeDialogue("Not one for talkin’ much, eh? Well, it ain’t our problem! We just gon’ call you...cutter!", 0));
         waitTime = 6.36f;
 
         Instantiate(bubblePrefab, flowPos, Quaternion.identity);
@@ -154,11 +154,11 @@ public class tutDiaogue : MonoBehaviour
 
         yield return new WaitForSeconds(6.58f);
 
-        StartCoroutine(TypeDialogue("There's some pretty messed up dudes out there who really want that soul stereo...", 1));
+        StartCoroutine(TypeDialogue("There's some pretty messed up dudes out there who really want that Soul Stereo...", 1));
         
         yield return new WaitForSeconds(3.82f);
 
-        StartCoroutine(TypeDialogue("OH! See that thing spinning in the center of the room behind ya? Yeah, that big record?", 0));
+        StartCoroutine(TypeDialogue("OH! See that spinning thing in the center of the room behind ya? Yeah, that big record?", 0));
         waitTime = 10.61f;
 
         Instantiate(bubblePrefab, flowPos, Quaternion.identity);
@@ -166,7 +166,7 @@ public class tutDiaogue : MonoBehaviour
 
         yield return new WaitForSeconds(4.71f);
 
-        StartCoroutine(TypeDialogue("That's the soul stereo, the very essence of your universe making your tiny little paper world go round!", 0));
+        StartCoroutine(TypeDialogue("That's the SOUL STEREO, the very essence of your universe making your tiny little paper world go round!", 0));
 
         yield return new WaitForSeconds(5.90f);
 
@@ -194,7 +194,7 @@ public class tutDiaogue : MonoBehaviour
 
         yield return new WaitForSeconds(4.21f);
 
-        StartCoroutine(TypeDialogue("Right, right. I guess we don’t got a choice either with little miss discordance threatinin’ to show her face again...", 1));
+        StartCoroutine(TypeDialogue("Right, right. I guess we don’t got a choice either with little Miss Discordance threatinin’ to show her face again...", 1));
         waitTime = 9.95f;
 
         Instantiate(bubblePrefab, ebbPos, Quaternion.identity);
