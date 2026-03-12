@@ -10,6 +10,9 @@ public class tutPopUp : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private tutDiaogue dialogueScript;
 
+    public GameObject ebbNamePlate;
+    public GameObject flowNamePlate;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +22,13 @@ public class tutPopUp : MonoBehaviour
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
+
+        if(gameObject.tag == "speechBubble")
+        {
+            ebbNamePlate.SetActive(false);
+            flowNamePlate.SetActive(false);
+        }
+        
         StartCoroutine(doPopUp());    
     }
 
@@ -37,10 +47,15 @@ public class tutPopUp : MonoBehaviour
         if (gameObject.tag == "speechBubble" && transform.position.x > 0f)
         {
             GetComponent<SpriteRenderer>().flipX = true;
+            ebbNamePlate.SetActive(true);
+            flowNamePlate.SetActive(false);
+
         }
         else if (gameObject.tag == "speechBubble" && transform.position.x < 0f)
         {
             GetComponent<SpriteRenderer>().flipX = false;
+            ebbNamePlate.SetActive(false);
+            flowNamePlate.SetActive(true);
         }
     }
 
