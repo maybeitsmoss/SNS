@@ -139,6 +139,7 @@ public class levelManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+
         SceneManager.LoadScene(sceneIndex);
 
         //desired behavior: after three deaths, allow the player to skip the level. they may continue to retry the level as many times as
