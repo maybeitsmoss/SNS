@@ -14,6 +14,9 @@ public class levelManager : MonoBehaviour
     private GameObject tutorialConductor;
     private AudioSource tutorialAudio;
 
+    public AudioSource snip;
+    public AudioSource kick;
+
     void Start()
     {
         if (SceneManager.GetActiveScene().name == "thissomebullshit")
@@ -44,6 +47,16 @@ public class levelManager : MonoBehaviour
                 Resume();
             }
         }
+    }
+
+    public void Snip()
+    {
+        snip.Play();
+    }
+
+    public void Kick()
+    {
+        kick.Play();
     }
 
     public void Pause()

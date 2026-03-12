@@ -16,10 +16,14 @@ public class footEnemylogic : MonoBehaviour
     public float stage3moveSpeed;
     public float stage0moveSpeed;
 
+    private levelManager levelManagerScript;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        levelManagerScript = GameObject.Find("LevelManager").GetComponent<levelManager>();
+
         if (SceneManager.GetActiveScene().name == "bbringitbaack")
         {
             moveSpeed = stage1moveSpeed;
@@ -59,6 +63,7 @@ public class footEnemylogic : MonoBehaviour
         if(collider.tag == "foot")
         {
             Instantiate(boomPrefab, transform.position, Quaternion.identity);
+            levelManagerScript.Kick();
             Destroy(gameObject);
         }
         

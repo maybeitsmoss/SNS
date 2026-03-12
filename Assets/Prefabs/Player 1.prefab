@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 616493753976091368}
   - component: {fileID: 687555738311033902}
   m_Layer: 3
-  m_Name: medieval-ancient-steel-sword-with-ornate-handle-on-isolated-background-png_0
+  m_Name: sword
   m_TagString: sword
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,6 +1053,7 @@ MonoBehaviour:
   mouseSensitivity: 2
   leftController: {fileID: 0}
   rightController: {fileID: 0}
+  gameOver: 0
 --- !u!233 &4485096942823158349
 HingeJoint2D:
   m_ObjectHideFlags: 0

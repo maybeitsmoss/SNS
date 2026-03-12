@@ -15,11 +15,18 @@ public class enemylogic : MonoBehaviour
     public float stage2moveSpeed;
     public float stage3moveSpeed;
     public float stage0moveSpeed;
+
+    private levelManager levelManagerScript;
+
+    //private AudioSource audioClip;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //audioClip = GetComponent<AudioSource>();
+        levelManagerScript = GameObject.Find("LevelManager").GetComponent<levelManager>();
+
         if(SceneManager.GetActiveScene().name == "bbringitbaack")
         {
             moveSpeed = stage1moveSpeed;
@@ -59,6 +66,9 @@ public class enemylogic : MonoBehaviour
         if(collider.tag == "sword")
         {
             Instantiate(halfPrefab, transform.position, Quaternion.identity);
+            //audioClip.Play();
+            //Debug.Log("snip");
+            levelManagerScript.Snip();
             Destroy(gameObject);
         }
         

@@ -22,7 +22,7 @@ public class tutDiaogue : MonoBehaviour
     public GameObject rightTop;
     public GameObject rightBottom;
 
-    public GameObject playerBubble;
+    //public GameObject playerBubble;
     public GameObject exclaimPrefab;
     public GameObject blueExclaimPrefab;
     public GameObject enemyPrefab;
@@ -39,7 +39,7 @@ public class tutDiaogue : MonoBehaviour
     void Start()
     {
         crochet = 60f / BPM;
-        playerBubble.GetComponent<SpriteRenderer>().enabled = false;
+        //playerBubble.GetComponent<SpriteRenderer>().enabled = false;
         boothPrefab.SetActive(false);
         music = GetComponent<AudioSource>();
         music.Play();
@@ -131,12 +131,12 @@ public class tutDiaogue : MonoBehaviour
         flowText.text = "";
         Debug.Log("...");
         waitTime = 3.63f;
-        playerBubble.GetComponent<SpriteRenderer>().enabled = true;
+        //playerBubble.GetComponent<SpriteRenderer>().enabled = true;
        
 
         yield return new WaitForSeconds(3.63f);
 
-        playerBubble.GetComponent<SpriteRenderer>().enabled = false;
+        //playerBubble.GetComponent<SpriteRenderer>().enabled = false;
 
         StartCoroutine(TypeDialogue("Not one for talkin’ much, eh? Well it ain’t our problem! We just gon’ call you...cutter!", 0));
         waitTime = 6.36f;
